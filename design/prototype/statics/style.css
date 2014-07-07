@@ -52,6 +52,13 @@ body{font-weight: 100;color: #fff;padding:0;margin:0;background-color: #133d6d;f
 .input{border:1px solid rgba(255, 255, 255, 0.3);border-radius: 5px;position: absolute;padding: 10px;font-size: 1.5em;width: 86%;margin-left:10px;}
 .input-sm{font-size: 1em !important;padding:5px !important;}
 
+.time-selector .item{height: 30px;color: rgba(255,255,255,0.5);padding: 5px;}
+.time-selector .item div{float: left;text-align: center;}
+.time-selector .item .date{width:40%;}
+.time-selector .item .time{width:30%;}
+.time-selector .item .ampm{width:30%;}
+.time-selector .item-selected{font-size: 1.5em !important;color: #fff !important;background: rgba(255,255,255,0.1) !important;padding: 10px 5px;}
+
 .pay-block{border-top:1px solid rgba(255, 255, 255, 0.3);background-color: rgba(255,255,255,0.1);position: absolute;bottom: 0;width: 100%;left: 0;}
 .pay-block .btn-pay{text-align: center;padding: 10px;margin: 10px 20px;border: 1px solid rgba(255,255,255,0.3);border-radius: 5px;background: rgba(255,255,255, 0.8); color:#133d6d;font-weight: 200;}
 
