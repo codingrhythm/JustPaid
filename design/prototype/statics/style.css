@@ -15,6 +15,7 @@ body{font-weight: 100;color: #fff;padding:0;margin:0;background-color: #133d6d;f
 .iphone .home-btn{width: 70px;position: absolute;left: 50%;top: 695px;height: 70px;border: 1px solid #fff;border-radius: 70px;margin-left: -35px;}
 .iphone .home-btn .icon{width: 24px;height: 24px;border-radius: 5px;border: 1px solid #fff;left: 50%;top: 50%;position: absolute;margin-top: -12px;margin-left: -12px;}
 
+.clearfix{clear: both;float: none !important;}
 
 .view{background: white;width:320px;height: 568px;position: relative;}
 .link{cursor: pointer;}
@@ -40,6 +41,7 @@ body{font-weight: 100;color: #fff;padding:0;margin:0;background-color: #133d6d;f
 .category-list li{list-style: none;float: left;width: 106px;height: 106px;margin-bottom: -10px;}
 .circle{width: 60%;height: 60%;border: 1px solid #fff;border-radius: 60%;margin:5px auto;position: relative;}
 .circle div{position: absolute;text-align: center;width: 100%;height: 100%;font-size: 2em;top:14px;}
+.category-list .lab{position: relative;width: auto;}
 .list-condensed li{margin-bottom: -22px}
 
 .table{margin: 0;padding: 0;}
@@ -61,5 +63,16 @@ body{font-weight: 100;color: #fff;padding:0;margin:0;background-color: #133d6d;f
 
 .pay-block{border-top:1px solid rgba(255, 255, 255, 0.3);background-color: rgba(255,255,255,0.1);position: absolute;bottom: 0;width: 100%;left: 0;}
 .pay-block .btn-pay{text-align: center;padding: 10px;margin: 10px 20px;border: 1px solid rgba(255,255,255,0.3);border-radius: 5px;background: rgba(255,255,255, 0.8); color:#133d6d;font-weight: 200;}
+
+.line{width: 3px;position: absolute;left: 30px;top: 0;height: 1000px;background: rgba(255,255,255,0.15);}
+.timeline{margin: 0;padding: 0;}
+.timeline li{list-style: none;padding:10px 0 0 15px;}
+.timeline li div{float: left;}
+.timeline .circle{width: 30px;height: 30px;border-radius: 30px;font-size: 0.5em;}
+.timeline .circle div{top: 6px;}
+.timeline li.date{background: rgba(255,255,255, 0.3);padding:3px 0 3px 55px;font-size: 0.8em;margin-top: 10px;}
+.timeline li .title{padding:7px 0 0 10px;width: 200px;font-size: 0.9em;}
+.timeline li .title small{font-size: 0.7em;color: rgba(255,255,255,0.75);line-height: 18px;}
+.timeline li .amount{float:right;padding-right: 10px;text-align: right;padding-left: 0; width: auto;}
 
 .theme-blue .view{background-color: #133d6d;}
