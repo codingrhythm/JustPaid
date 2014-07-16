@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6198" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BookItem" representedClassName="BookItem" syncable="YES">
+        <attribute name="amount" attributeType="Double" minValueString="0" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+        <attribute name="bookDate" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="bookDateDate" optional="YES" attributeType="Integer 16" minValueString="1" defaultValueString="1" indexed="YES" syncable="YES"/>
+        <attribute name="bookDateDay" attributeType="Integer 16" minValueString="0" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="bookDateHour" attributeType="Integer 16" minValueString="0" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="bookDateMinute" attributeType="Integer 16" minValueString="0" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="bookDateMonth" attributeType="Integer 16" minValueString="1" defaultValueString="1" indexed="YES" syncable="YES"/>
+        <attribute name="bookDateWeek" attributeType="Integer 16" minValueString="1" maxValueString="53" defaultValueString="1" indexed="YES" syncable="YES"/>
+        <attribute name="bookDateYear" attributeType="Integer 16" minValueString="2000" maxValueString="3000" defaultValueString="2014" indexed="YES" syncable="YES"/>
+        <attribute name="category" attributeType="String" maxValueString="32" defaultValueString="default" indexed="YES" syncable="YES"/>
+        <attribute name="isExpense" attributeType="Boolean" defaultValueString="YES" indexed="YES" syncable="YES"/>
+        <attribute name="isPrivate" attributeType="Boolean" defaultValueString="NO" indexed="YES" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" indexed="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" indexed="YES" syncable="YES"/>
+        <attribute name="status" attributeType="String" defaultValueString="added" indexed="YES" syncable="YES"/>
+        <attribute name="tags" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="bookKeeper" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BookKeeper" inverseName="bookItems" inverseEntity="BookKeeper" syncable="YES"/>
+        <relationship name="reminder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BookItemReminder" inverseName="bookItems" inverseEntity="BookItemReminder" syncable="YES"/>
+    </entity>
+    <entity name="BookItemReminder" representedClassName="BookItemReminder" syncable="YES">
+        <attribute name="recurrence_rate" attributeType="String" minValueString="3" maxValueString="16" defaultValueString="weekly" indexed="YES" syncable="YES"/>
+        <attribute name="recurrence_step" attributeType="Integer 16" minValueString="1" maxValueString="12" defaultValueString="1" indexed="YES" syncable="YES"/>
+        <attribute name="start_date" attributeType="Date" indexed="YES" syncable="YES"/>
+        <relationship name="bookItems" toMany="YES" deletionRule="Nullify" destinationEntity="BookItem" inverseName="reminder" inverseEntity="BookItem" syncable="YES"/>
+    </entity>
+    <entity name="BookItemTags" representedClassName="BookItemTags" syncable="YES">
+        <attribute name="tag" attributeType="String" minValueString="1" maxValueString="64" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="BookKeeper" representedClassName="BookKeeper" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="isLocal" attributeType="Boolean" defaultValueString="YES" indexed="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="bookItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="BookItem" inverseName="bookKeeper" inverseEntity="BookItem" syncable="YES"/>
+        <relationship name="familyBooks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FamilyBook" inverseName="members" inverseEntity="FamilyBook" syncable="YES"/>
+        <relationship name="ownedFamilyBooks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FamilyBook" inverseName="owner" inverseEntity="FamilyBook" syncable="YES"/>
+    </entity>
+    <entity name="FamilyBook" representedClassName="FamilyBook" syncable="YES">
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="members" toMany="YES" deletionRule="Nullify" destinationEntity="BookKeeper" inverseName="familyBooks" inverseEntity="BookKeeper" syncable="YES"/>
+        <relationship name="owner" maxCount="1" deletionRule="Nullify" destinationEntity="BookKeeper" inverseName="ownedFamilyBooks" inverseEntity="BookKeeper" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BookItem" positionX="-344" positionY="-160" width="128" height="315"/>
+        <element name="BookItemReminder" positionX="-128" positionY="-63" width="128" height="105"/>
+        <element name="BookItemTags" positionX="-54" positionY="81" width="128" height="60"/>
+        <element name="BookKeeper" positionX="-135" positionY="-207" width="128" height="135"/>
+        <element name="FamilyBook" positionX="-198" positionY="-54" width="128" height="88"/>
+    </elements>
+</model>
