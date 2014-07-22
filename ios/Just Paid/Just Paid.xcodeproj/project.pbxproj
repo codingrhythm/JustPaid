@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		143E6747197E4AC100FB32E5 /* BookItemReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143E6746197E4AC100FB32E5 /* BookItemReminder.swift */; };
+		143E674D197E4CFF00FB32E5 /* TimelineRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143E674C197E4CFF00FB32E5 /* TimelineRootViewController.swift */; };
+		143E674F197E4D1B00FB32E5 /* FamilyBookRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143E674E197E4D1B00FB32E5 /* FamilyBookRootViewController.swift */; };
+		143E6751197E4D4100FB32E5 /* BookItemRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143E6750197E4D4100FB32E5 /* BookItemRootViewController.swift */; };
 		1462ED3119734214004862EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462ED3019734214004862EC /* AppDelegate.swift */; };
-		1462ED3319734214004862EC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462ED3219734214004862EC /* FirstViewController.swift */; };
-		1462ED3519734214004862EC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462ED3419734214004862EC /* SecondViewController.swift */; };
 		1462ED3819734214004862EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1462ED3619734214004862EC /* Main.storyboard */; };
 		1462ED3A19734214004862EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1462ED3919734214004862EC /* Images.xcassets */; };
 		1462ED4619734214004862EC /* Just_PaidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462ED4519734214004862EC /* Just_PaidTests.swift */; };
-		14ADE42F19751E2300D43FCC /* BookItemTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ADE42E19751E2300D43FCC /* BookItemTags.swift */; };
-		14ADE43119751E9800D43FCC /* BookKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ADE43019751E9800D43FCC /* BookKeeper.swift */; };
-		14ADE43319751E9800D43FCC /* FamilyBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ADE43219751E9800D43FCC /* FamilyBook.swift */; };
-		14ADE43519751F5600D43FCC /* BookItemReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ADE43419751F5600D43FCC /* BookItemReminder.swift */; };
-		14ADE43719751FBC00D43FCC /* BookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ADE43619751FBC00D43FCC /* BookItem.swift */; };
+		1494C6FE197DCD62006AF4E4 /* BookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1494C6FD197DCD62006AF4E4 /* BookItem.swift */; };
+		1494C700197DCDB1006AF4E4 /* BookKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1494C6FF197DCDB1006AF4E4 /* BookKeeper.swift */; };
+		1494C702197DCDB2006AF4E4 /* FamilyBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1494C701197DCDB2006AF4E4 /* FamilyBook.swift */; };
+		1494C708197DCF1F006AF4E4 /* CKEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1494C707197DCF1F006AF4E4 /* CKEntity.swift */; };
+		1494C70A197DCF40006AF4E4 /* BookItemTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1494C709197DCF3F006AF4E4 /* BookItemTags.swift */; };
+		14999A551977B76300F8C4A0 /* JPUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14999A541977B76300F8C4A0 /* JPUtilities.swift */; };
 		14E15EE01973BE34002D2DF1 /* JustPaidModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14E15EDE1973BE34002D2DF1 /* JustPaidModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -32,21 +35,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		143E6746197E4AC100FB32E5 /* BookItemReminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookItemReminder.swift; sourceTree = "<group>"; };
+		143E674C197E4CFF00FB32E5 /* TimelineRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineRootViewController.swift; sourceTree = "<group>"; };
+		143E674E197E4D1B00FB32E5 /* FamilyBookRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBookRootViewController.swift; sourceTree = "<group>"; };
+		143E6750197E4D4100FB32E5 /* BookItemRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookItemRootViewController.swift; sourceTree = "<group>"; };
 		1462ED2B19734214004862EC /* Just Paid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Just Paid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1462ED2F19734214004862EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1462ED3019734214004862EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1462ED3219734214004862EC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		1462ED3419734214004862EC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		1462ED3719734214004862EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1462ED3919734214004862EC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1462ED3F19734214004862EC /* Just PaidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Just PaidTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1462ED4419734214004862EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1462ED4519734214004862EC /* Just_PaidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just_PaidTests.swift; sourceTree = "<group>"; };
-		14ADE42E19751E2300D43FCC /* BookItemTags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookItemTags.swift; sourceTree = SOURCE_ROOT; };
-		14ADE43019751E9800D43FCC /* BookKeeper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookKeeper.swift; sourceTree = SOURCE_ROOT; };
-		14ADE43219751E9800D43FCC /* FamilyBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBook.swift; sourceTree = "<group>"; };
-		14ADE43419751F5600D43FCC /* BookItemReminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookItemReminder.swift; sourceTree = SOURCE_ROOT; };
-		14ADE43619751FBC00D43FCC /* BookItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookItem.swift; sourceTree = SOURCE_ROOT; };
+		1494C6FD197DCD62006AF4E4 /* BookItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookItem.swift; sourceTree = "<group>"; };
+		1494C6FF197DCDB1006AF4E4 /* BookKeeper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookKeeper.swift; sourceTree = "<group>"; };
+		1494C701197DCDB2006AF4E4 /* FamilyBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBook.swift; sourceTree = "<group>"; };
+		1494C707197DCF1F006AF4E4 /* CKEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKEntity.swift; sourceTree = "<group>"; };
+		1494C709197DCF3F006AF4E4 /* BookItemTags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookItemTags.swift; sourceTree = "<group>"; };
+		14999A541977B76300F8C4A0 /* JPUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPUtilities.swift; sourceTree = "<group>"; };
 		14E15EDF1973BE34002D2DF1 /* JustPaidModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JustPaidModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +74,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		143E6748197E4C4100FB32E5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				143E674B197E4CA600FB32E5 /* Timeline View Controllers */,
+				143E674A197E4C9500FB32E5 /* Family Book View Controllers */,
+				143E6749197E4C4E00FB32E5 /* Book Item View Controllers */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		143E6749197E4C4E00FB32E5 /* Book Item View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				143E6750197E4D4100FB32E5 /* BookItemRootViewController.swift */,
+			);
+			name = "Book Item View Controllers";
+			sourceTree = "<group>";
+		};
+		143E674A197E4C9500FB32E5 /* Family Book View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				143E674E197E4D1B00FB32E5 /* FamilyBookRootViewController.swift */,
+			);
+			name = "Family Book View Controllers";
+			sourceTree = "<group>";
+		};
+		143E674B197E4CA600FB32E5 /* Timeline View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				143E674C197E4CFF00FB32E5 /* TimelineRootViewController.swift */,
+			);
+			name = "Timeline View Controllers";
+			sourceTree = "<group>";
+		};
 		1462ED2219734214004862EC = {
 			isa = PBXGroup;
 			children = (
@@ -89,10 +129,10 @@
 		1462ED2D19734214004862EC /* Just Paid */ = {
 			isa = PBXGroup;
 			children = (
+				143E6748197E4C4100FB32E5 /* Controllers */,
+				14999A531977B72700F8C4A0 /* Utilities */,
 				14E15EDD1973BD91002D2DF1 /* Models */,
 				1462ED3019734214004862EC /* AppDelegate.swift */,
-				1462ED3219734214004862EC /* FirstViewController.swift */,
-				1462ED3419734214004862EC /* SecondViewController.swift */,
 				1462ED3619734214004862EC /* Main.storyboard */,
 				1462ED3919734214004862EC /* Images.xcassets */,
 				1462ED2E19734214004862EC /* Supporting Files */,
@@ -125,15 +165,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		14999A531977B72700F8C4A0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				14999A541977B76300F8C4A0 /* JPUtilities.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		14E15EDD1973BD91002D2DF1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				14ADE43419751F5600D43FCC /* BookItemReminder.swift */,
-				14ADE42E19751E2300D43FCC /* BookItemTags.swift */,
+				1494C701197DCDB2006AF4E4 /* FamilyBook.swift */,
+				1494C6FF197DCDB1006AF4E4 /* BookKeeper.swift */,
+				1494C6FD197DCD62006AF4E4 /* BookItem.swift */,
 				14E15EDE1973BE34002D2DF1 /* JustPaidModel.xcdatamodeld */,
-				14ADE43619751FBC00D43FCC /* BookItem.swift */,
-				14ADE43219751E9800D43FCC /* FamilyBook.swift */,
-				14ADE43019751E9800D43FCC /* BookKeeper.swift */,
+				143E6746197E4AC100FB32E5 /* BookItemReminder.swift */,
+				1494C709197DCF3F006AF4E4 /* BookItemTags.swift */,
+				1494C707197DCF1F006AF4E4 /* CKEntity.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -237,14 +286,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14ADE43319751E9800D43FCC /* FamilyBook.swift in Sources */,
-				1462ED3519734214004862EC /* SecondViewController.swift in Sources */,
-				14ADE43119751E9800D43FCC /* BookKeeper.swift in Sources */,
+				1494C708197DCF1F006AF4E4 /* CKEntity.swift in Sources */,
+				143E674F197E4D1B00FB32E5 /* FamilyBookRootViewController.swift in Sources */,
+				1494C702197DCDB2006AF4E4 /* FamilyBook.swift in Sources */,
 				1462ED3119734214004862EC /* AppDelegate.swift in Sources */,
-				1462ED3319734214004862EC /* FirstViewController.swift in Sources */,
-				14ADE42F19751E2300D43FCC /* BookItemTags.swift in Sources */,
-				14ADE43519751F5600D43FCC /* BookItemReminder.swift in Sources */,
-				14ADE43719751FBC00D43FCC /* BookItem.swift in Sources */,
+				143E6751197E4D4100FB32E5 /* BookItemRootViewController.swift in Sources */,
+				1494C700197DCDB1006AF4E4 /* BookKeeper.swift in Sources */,
+				14999A551977B76300F8C4A0 /* JPUtilities.swift in Sources */,
+				1494C6FE197DCD62006AF4E4 /* BookItem.swift in Sources */,
+				143E6747197E4AC100FB32E5 /* BookItemReminder.swift in Sources */,
+				1494C70A197DCF40006AF4E4 /* BookItemTags.swift in Sources */,
+				143E674D197E4CFF00FB32E5 /* TimelineRootViewController.swift in Sources */,
 				14E15EE01973BE34002D2DF1 /* JustPaidModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

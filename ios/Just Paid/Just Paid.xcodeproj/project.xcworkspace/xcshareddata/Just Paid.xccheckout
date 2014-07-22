@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A48E12B2-0837-4A0B-BD7B-D0F4ABE961A6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Just Paid</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8F9C69F4-1BC5-4559-841B-0CCD11D44E53</key>
+		<string>https://github.com/codingrhythm/JustPaid.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios/Just Paid/Just Paid.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8F9C69F4-1BC5-4559-841B-0CCD11D44E53</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/codingrhythm/JustPaid.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8F9C69F4-1BC5-4559-841B-0CCD11D44E53</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8F9C69F4-1BC5-4559-841B-0CCD11D44E53</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JustPaid</string>
+		</dict>
+	</array>
+</dict>
+</plist>
