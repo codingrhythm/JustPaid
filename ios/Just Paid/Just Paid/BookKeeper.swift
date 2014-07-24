@@ -14,5 +14,8 @@ class BookKeeper: CKEntity {
     @NSManaged var identifier: String
     @NSManaged var isLocal: NSNumber
     @NSManaged var name: String
+    @NSManaged var referenceID: String
+    @NSManaged var changeToken: String
+    @NSManaged var synced: String
 
 }

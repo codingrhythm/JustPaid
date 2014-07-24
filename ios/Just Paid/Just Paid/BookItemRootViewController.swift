@@ -21,6 +21,11 @@ class BookItemRootViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Mark: - Event Handlers
+    @IBAction func addTag(sender:AnyObject?){
+        BookItemTag.create("Test Tag")
+    }
+    
 
     /*
     // MARK: - Navigation

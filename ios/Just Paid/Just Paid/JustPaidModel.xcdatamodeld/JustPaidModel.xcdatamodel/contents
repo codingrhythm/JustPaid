@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6208.6" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="BookItem" representedClassName="BookItem" parentEntity="CKEntity" syncable="YES">
+    <entity name="BookItem" representedClassName="BookItem" syncable="YES">
         <attribute name="amount" attributeType="Double" minValueString="0" defaultValueString="0.0" indexed="YES" syncable="YES"/>
         <attribute name="bookDate" attributeType="Date" indexed="YES" syncable="YES"/>
         <attribute name="bookDateDate" optional="YES" attributeType="Integer 16" minValueString="1" defaultValueString="1" indexed="YES" syncable="YES"/>
@@ -12,42 +12,51 @@
         <attribute name="bookDateYear" attributeType="Integer 16" minValueString="2000" maxValueString="3000" defaultValueString="2014" indexed="YES" syncable="YES"/>
         <attribute name="bookKeeperID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="category" attributeType="String" maxValueString="32" defaultValueString="default" indexed="YES" syncable="YES"/>
+        <attribute name="changeToken" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="isExpense" attributeType="Boolean" defaultValueString="YES" indexed="YES" syncable="YES"/>
         <attribute name="isPrivate" attributeType="Boolean" defaultValueString="NO" indexed="YES" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" indexed="YES" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" indexed="YES" syncable="YES"/>
+        <attribute name="referenceID" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="reminderID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" attributeType="String" defaultValueString="added" indexed="YES" syncable="YES"/>
+        <attribute name="syncStatus" attributeType="String" defaultValueString="unsynced" indexed="YES" syncable="YES"/>
         <attribute name="tags" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
     </entity>
-    <entity name="BookItemReminder" representedClassName="BookItemReminder" parentEntity="CKEntity" syncable="YES">
+    <entity name="BookItemReminder" representedClassName="BookItemReminder" syncable="YES">
+        <attribute name="changeToken" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="recurrenceRate" attributeType="String" minValueString="3" maxValueString="16" defaultValueString="weekly" indexed="YES" syncable="YES"/>
         <attribute name="recurrenceStep" attributeType="Integer 16" minValueString="1" maxValueString="12" defaultValueString="1" indexed="YES" syncable="YES"/>
+        <attribute name="referenceID" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="startDate" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="syncStatus" attributeType="String" defaultValueString="unsynced" indexed="YES" syncable="YES"/>
     </entity>
-    <entity name="BookItemTags" representedClassName="BookItemTags" parentEntity="CKEntity" syncable="YES">
+    <entity name="BookItemTag" representedClassName="BookItemTag" syncable="YES">
+        <attribute name="changeToken" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="referenceID" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="syncStatus" attributeType="String" defaultValueString="unsynced" indexed="YES" syncable="YES"/>
         <attribute name="tag" attributeType="String" minValueString="1" maxValueString="64" indexed="YES" syncable="YES"/>
     </entity>
-    <entity name="BookKeeper" representedClassName="BookKeeper" parentEntity="CKEntity" syncable="YES">
+    <entity name="BookKeeper" representedClassName="BookKeeper" syncable="YES">
+        <attribute name="changeToken" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="identifier" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="isLocal" attributeType="Boolean" defaultValueString="YES" indexed="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="referenceID" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="syncStatus" attributeType="String" defaultValueString="unsynced" indexed="YES" syncable="YES"/>
     </entity>
-    <entity name="CKEntity" representedClassName="CKEntity" isAbstract="YES" syncable="YES">
-        <attribute name="changeTag" attributeType="String" indexed="YES" syncable="YES"/>
-        <attribute name="referenceID" attributeType="String" indexed="YES" syncable="YES"/>
-        <attribute name="synced" attributeType="Boolean" defaultValueString="NO" indexed="YES" syncable="YES"/>
-    </entity>
-    <entity name="FamilyBook" representedClassName="FamilyBook" parentEntity="CKEntity" syncable="YES">
+    <entity name="FamilyBook" representedClassName="FamilyBook" syncable="YES">
+        <attribute name="changeToken" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="ownerID" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="referenceID" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="syncStatus" attributeType="String" defaultValueString="unsynced" indexed="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="BookItem" positionX="-344" positionY="-160" width="128" height="313"/>
-        <element name="BookItemReminder" positionX="-128" positionY="-63" width="128" height="90"/>
-        <element name="BookItemTags" positionX="-54" positionY="81" width="128" height="58"/>
-        <element name="BookKeeper" positionX="-135" positionY="-207" width="128" height="88"/>
-        <element name="CKEntity" positionX="-198" positionY="-54" width="128" height="88"/>
-        <element name="FamilyBook" positionX="-198" positionY="-54" width="128" height="73"/>
+        <element name="BookItem" positionX="-344" positionY="-160" width="128" height="358"/>
+        <element name="BookItemReminder" positionX="72" positionY="-90" width="128" height="133"/>
+        <element name="BookItemTag" positionX="-2" positionY="131" width="128" height="103"/>
+        <element name="BookKeeper" positionX="-135" positionY="-207" width="128" height="133"/>
+        <element name="FamilyBook" positionX="-207" positionY="179" width="128" height="120"/>
     </elements>
 </model>

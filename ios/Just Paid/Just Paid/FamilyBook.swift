@@ -13,5 +13,8 @@ class FamilyBook: CKEntity {
 
     @NSManaged var name: String
     @NSManaged var ownerID: String
+    @NSManaged var referenceID: String
+    @NSManaged var changeToken: String
+    @NSManaged var synced: String
 
 }

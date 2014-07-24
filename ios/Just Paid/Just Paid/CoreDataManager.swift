@@ -9,8 +9,9 @@
 import Foundation
 import CoreData
 
+let CDMSharedInstance:CoreDataManager = CoreDataManager()
 
-class JPUtilities {
+class CoreDataManager {
     
     var applicationDocumentDirectory : NSURL {
         // return directory that app used to store core data file

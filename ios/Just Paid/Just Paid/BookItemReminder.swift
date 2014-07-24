@@ -14,5 +14,8 @@ class BookItemReminder: CKEntity {
     @NSManaged var recurrenceRate: String
     @NSManaged var recurrenceStep: NSNumber
     @NSManaged var startDate: NSDate
+    @NSManaged var referenceID: String
+    @NSManaged var changeToken: String
+    @NSManaged var synced: String
 
 }

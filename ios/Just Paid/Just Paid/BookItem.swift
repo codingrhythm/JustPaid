@@ -29,5 +29,8 @@ class BookItem: CKEntity {
     @NSManaged var tags: String
     @NSManaged var reminderID: String
     @NSManaged var bookKeeperID: String
+    @NSManaged var referenceID: String
+    @NSManaged var changeToken: String
+    @NSManaged var synced: String
 
 }
