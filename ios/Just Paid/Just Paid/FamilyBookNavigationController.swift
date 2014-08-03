@@ -1,19 +1,22 @@
 //
-//  FamilyBookRootViewController.swift
+//  FamilyBookNavigationController.swift
 //  Just Paid
 //
-//  Created by Zack Zhu on 22/07/2014.
+//  Created by Zack Zhu on 3/08/2014.
 //  Copyright (c) 2014 Zack Zhu. All rights reserved.
 //
 
 import UIKit
 
-class FamilyBookRootViewController: UIViewController {
+class FamilyBookNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationBar.shadowImage = UIImage()
+        self.navigationBar.translucent = true
     }
 
     override func didReceiveMemoryWarning() {

@@ -4,26 +4,66 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
     </dependencies>
     <scenes>
-        <!--Family Book-->
-        <scene sceneID="tPO-rN-UAB">
+        <!--Family Book Navigation Controller-->
+        <scene sceneID="236-n6-SBd">
             <objects>
-                <viewController id="hFb-gy-4zw" customClass="FamilyBookRootViewController" customModule="Just_Paid" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sJH-I9-mAo"/>
-                        <viewControllerLayoutGuide type="bottom" id="AQ4-vc-t67"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rJu-Vp-Zla">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Family Book" image="first" id="SuJ-bK-08B"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Www-e4-lzt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="Pq4-KS-UTb" customClass="FamilyBookNavigationController" customModule="Just_Paid" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="FamilyBookIcon" id="PTq-s0-mXO">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v9Z-03-wza">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rkU-zh-mj1" kind="relationship" relationship="rootViewController" id="uXi-RY-Gc6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gex-fj-INu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="763" y="-1002"/>
+            <point key="canvasLocation" x="755" y="-1090"/>
         </scene>
-        <!--Timeline-->
+        <!--Family Book Detail View Controller-->
+        <scene sceneID="rB8-8C-I0O">
+            <objects>
+                <viewController id="rkU-zh-mj1" customClass="FamilyBookDetailViewController" customModule="Just_Paid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r3c-Iu-TRr"/>
+                        <viewControllerLayoutGuide type="bottom" id="cPM-Yx-YqD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cAW-eV-lzL">
+                        <rect key="frame" x="0.0" y="44" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FamilyBookBackground" translatesAutoresizingMaskIntoConstraints="NO" id="oPC-Fc-AVI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Kzl-iJ-iyc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oPC-Fc-AVI" secondAttribute="trailing" id="0Co-JZ-kcr"/>
+                            <constraint firstItem="oPC-Fc-AVI" firstAttribute="top" secondItem="cAW-eV-lzL" secondAttribute="top" id="Qqu-W4-Tzl"/>
+                            <constraint firstItem="oPC-Fc-AVI" firstAttribute="leading" secondItem="cAW-eV-lzL" secondAttribute="leading" id="gPt-Z5-zkn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mye-eG-cgH">
+                        <barButtonItem key="leftBarButtonItem" title="Join" id="FqI-yR-7FX">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="addIcon" id="OTE-t2-FRL">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hhq-wG-MF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528" y="-1090"/>
+        </scene>
+        <!--Timeline Root View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="TimelineRootViewController" customModule="Just_Paid" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,7 +104,9 @@
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Timeline" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="" image="TimelineIcon" id="acW-dT-cKf">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,7 +182,9 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="" image="addButton" id="cPa-gy-q4n">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,8 +194,8 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="fill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -159,7 +203,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="hFb-gy-4zw" kind="relationship" relationship="viewControllers" id="piI-Uz-PU3"/>
+                        <segue destination="Pq4-KS-UTb" kind="relationship" relationship="viewControllers" id="xbV-Sj-t0e"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -168,7 +212,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="FamilyBookBackground" width="320" height="250"/>
+        <image name="FamilyBookIcon" width="36" height="36"/>
+        <image name="TimelineIcon" width="35" height="36"/>
+        <image name="addButton" width="45" height="45"/>
+        <image name="addIcon" width="15" height="15"/>
     </resources>
 </document>
