@@ -1,15 +1,15 @@
 //
 //  BookItem.swift
-//  BookItem
+//  Just Paid
 //
-//  Created by Zack Zhu on 15/07/2014.
+//  Created by Zack Zhu on 22/07/2014.
 //  Copyright (c) 2014 Zack Zhu. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-class BookItem: NSManagedObject {
+class BookItem: CKEntity {
 
     @NSManaged var amount: NSNumber
     @NSManaged var bookDate: NSDate
@@ -27,8 +27,7 @@ class BookItem: NSManagedObject {
     @NSManaged var longitude: NSNumber
     @NSManaged var status: String
     @NSManaged var tags: String
-    @NSManaged var bookKeeper: BookKeeper
-    @NSManaged var reminder: BookItemReminder
-    
-    
+    @NSManaged var reminderID: String
+    @NSManaged var bookKeeperID: String
+
 }
