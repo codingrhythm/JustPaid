@@ -9,7 +9,9 @@
 import UIKit
 
 class BookItemRootViewController: UIViewController {
-
+    
+    var tag:BookItemTag?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,9 +25,20 @@ class BookItemRootViewController: UIViewController {
     
     // Mark: - Event Handlers
     @IBAction func addTag(sender:AnyObject?){
-        BookItemTag.create("Test Tag")
+        self.tag = BookItemTag.create("Test Tag")!
     }
     
+    @IBAction func editTag(sender:AnyObject?){
+        let bookItemTag = self.tag!
+        bookItemTag.tag = "Updated Tag"
+        let moc = CDMSharedInstance.managedObjectContext!
+        moc.save(nil)
+    }
+    
+    @IBAction func deleteTag(sender:AnyObject?){
+        let bookItemTag = self.tag!
+        bookItemTag.markAsDeleted()
+    }
 
     /*
     // MARK: - Navigation

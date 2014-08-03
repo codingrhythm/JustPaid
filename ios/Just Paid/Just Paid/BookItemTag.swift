@@ -1,5 +1,5 @@
 //
-//  BookItemTags.swift
+//  BookItemTag.swift
 //  Just Paid
 //
 //  Created by Zack Zhu on 22/07/2014.
@@ -14,29 +14,34 @@ class BookItemTag: CKEntity {
 
     // MARK: Properties
     @NSManaged var tag: String
-    @NSManaged var referenceID: String
-    @NSManaged var changeToken: String
-    @NSManaged var synced: String
     
     override var recordType:String {
-        return "BookItemTags"
+        return "BookItemTag"
     }
     
-    override var cloudKitRecord:CKRecord {
-        var record = super.cloudKitRecord
-            
-        record.setObject(self.tag, forKey: "tag")
-            
-        return record
+    override var cloudKitPrivateRecord:CKRecord {
+        return self.getCloudKitRecord(super.cloudKitPrivateRecord)
+    }
+    
+    override var cloudKitPublicRecord:CKRecord {
+        return self.getCloudKitRecord(super.cloudKitPublicRecord)
+    }
+    
+    public override func getCloudKitRecord(record:CKRecord) -> CKRecord{
+        let thisRecord = super.getCloudKitRecord(record)
+        thisRecord.setObject(self.tag, forKey: "tag")
+        return thisRecord
     }
     
     // MARK: Class Methods
     
     // Create tag
     class func create(tag:String) -> BookItemTag? {
-        let newObject = NSEntityDescription.insertNewObjectForEntityForName("BookItemTag", inManagedObjectContext: CDMSharedInstance.managedObjectContext()) as BookItemTag
+        let moc = CDMSharedInstance.managedObjectContext!
+        let newObject = NSEntityDescription.insertNewObjectForEntityForName("BookItemTag", inManagedObjectContext: moc) as BookItemTag
         
-        newObject.sync()
+        newObject.tag = tag
+        moc.save(nil)
         
         return newObject
     }

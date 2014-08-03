@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Just_Paid.CoreDataManager.contextChanged (Just_Paid.CoreDataManager)(ObjectiveC.NSNotification) -&gt; ():CoreDataManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "NSInsertedObjectsKey">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Just_Paid.CKEntity.cloudKitPrivateRecord.getter : ObjectiveC.CKRecord:CKEntity.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "record.recordID">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

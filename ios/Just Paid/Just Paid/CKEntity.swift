@@ -10,25 +10,57 @@ import Foundation
 import CoreData
 import CloudKit
 
-class CKEntity: NSManagedObject {
+let SyncStatusOffline = "offline"
+let SyncStatusSynced = "synced"
+let SyncStatusChanged = "changed"
+let SyncStatusDeleted = "deleted"
 
-    // MARK: Managed Properties
+@objc protocol CKEntityProtocol {
+     func sync()
+}
+
+class CKEntity: NSManagedObject, CKEntityProtocol {
     
-    let zoneName:String = "Just Paid Zone"
-    let ownerName:String = "Just Paid Owner"
+    // MARK: Enumeration
+    
     
     // MARK: Properties
-    lazy var zoneID:CKRecordZoneID = {
-        return CKRecordZoneID(zoneName:self.zoneName, ownerName: self.ownerName)
-    }()
+    @NSManaged var ck_privateReferenceID: String
+    @NSManaged var ck_privateChangeTag: String
+    
+    /**
+     Specifies the cloudkit sync status for current record.
+    */
+    @NSManaged var ck_privateSyncStatus: String
+    @NSManaged var ck_publicReferenceID: String
+    @NSManaged var ck_publicChangeTag: String
+    @NSManaged var ck_publicSyncStatus: String
+    @NSManaged var ck_isDirty:NSNumber
+    
+    var zoneID:CKRecordZoneID {
+        return CKRecordZoneID(zoneName:PrivateZoneName, ownerName: CKOwnerDefaultName)
+    }
+    
+    var privateRecordID:CKRecordID {
+       return CKRecordID(recordName: self.ck_privateReferenceID, zoneID: self.zoneID)
+    }
+    
+    var publicRecordID:CKRecordID {
+        return CKRecordID(recordName: self.ck_publicReferenceID)
+    }
     
     var recordType:String {
         return "default"
     }
     
     
-    var cloudKitRecord: CKRecord {
+    var cloudKitPrivateRecord: CKRecord  {
         var record:CKRecord = CKRecord(recordType: self.recordType, zoneID: self.zoneID)
+        return record
+    }
+    
+    var cloudKitPublicRecord: CKRecord {
+        var record:CKRecord = CKRecord(recordType: self.recordType)
         return record
     }
     
@@ -36,8 +68,8 @@ class CKEntity: NSManagedObject {
         super.init(entity: entity, insertIntoManagedObjectContext: context)
     }
     
-    // Sync to private database
-    func sync(){
+    // Sync with public database
+    public func syncWithPublicDB(){
         
         // record save handler
         func recordSaved(record:CKRecord?, error:NSError?){
@@ -50,9 +82,106 @@ class CKEntity: NSManagedObject {
             println(record)
         }
         
-        // save to private database
-        CKMShareInstance.privateDatabase.saveRecord(self.cloudKitRecord, completionHandler: recordSaved)
+        // save to public database
+        CKMShareInstance.publicDatabase.saveRecord(self.cloudKitPrivateRecord, completionHandler: recordSaved)
+    }
+    
+    // Sync to private database
+    private func syncWithPrivateDB(){
+        // record save handler
+        func recordSaved(record:CKRecord?, error:NSError?){
+            if error{
+                // handle the error
+                println(error)
+                return
+            }
+            
+            println("record synced in private database")
+            self.ck_privateReferenceID = record!.recordID.recordName
+            self.ck_privateChangeTag = record!.recordChangeTag
+            self.ck_privateSyncStatus = SyncStatusSynced
+            self.ck_isDirty = 0
+            self.managedObjectContext.save(nil)
+        }
+        
+        func recordDeleted(recordID:CKRecordID?, error:NSError?){
+            if error{
+                println(error)
+                return
+            }
+            
+            println("record delted from private database")
+            self.managedObjectContext.deleteObject(self)
+        }
+        
+        // record process block
+        func recordProgressChanged(record:CKRecord?, progress:Double){
+            println("progress changed")
+        }
+        
+        // save to public database
+        if self.ck_privateSyncStatus == SyncStatusOffline {
+            // save as new record
+            CKMShareInstance.privateDatabase.saveRecord(self.cloudKitPrivateRecord, completionHandler: recordSaved)
+        }
+        else if self.ck_privateSyncStatus == SyncStatusDeleted {
+            CKMShareInstance.privateDatabase.deleteRecordWithID(self.privateRecordID, completionHandler: recordDeleted)
+        }else{
+            // update the old record
+            
+            func recordFetched(record:CKRecord?, error:NSError?){
+                if error{
+                    // handle the error
+                    println(error)
+                    return
+                }
+                
+                let modifyOperation:CKModifyRecordsOperation = CKModifyRecordsOperation(recordsToSave: nil, recordIDsToDelete: nil)
+                
+                modifyOperation.recordsToSave = [self.getCloudKitRecord(record!)]
+                modifyOperation.perRecordCompletionBlock = recordSaved
+                modifyOperation.perRecordProgressBlock = recordProgressChanged
+                CKMShareInstance.privateDatabase.addOperation(modifyOperation)
+                
+            }
+            
+            
+            // fetch the record for server first
+            CKMShareInstance.privateDatabase.fetchRecordWithID(self.privateRecordID, completionHandler: recordFetched)
+            
+        }
     }
     
     
+    public func getCloudKitRecord(record:CKRecord) -> CKRecord{
+        return record
+    }
+    
+    public func sync() {
+        if self.ck_privateSyncStatus == SyncStatusDeleted{
+            // this record is deleted
+            self.syncWithPrivateDB()
+            return
+        }
+        
+        let changedValues: NSDictionary = self.changedValues() as NSDictionary
+        
+        var valueChanged = false
+        for (key, value) in changedValues{
+            if (!key.hasPrefix("ck_")){
+                valueChanged = true
+                break
+            }
+        }
+        
+        if valueChanged{
+            self.syncWithPrivateDB()
+        }
+    }
+    
+    public func markAsDeleted() {
+        self.ck_privateSyncStatus = SyncStatusDeleted
+        self.ck_publicSyncStatus = SyncStatusDeleted
+        self.managedObjectContext.save(nil)
+    }
 }
