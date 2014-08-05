@@ -38,7 +38,7 @@ class CloudKitManager:NSObject{
     /**
     constructor
     */
-    init(){
+    override init(){
         
         
         // get default container
@@ -59,7 +59,7 @@ class CloudKitManager:NSObject{
     
     func checkUserAccountStatus(){
         func accountStatusChecked(status:CKAccountStatus, error:NSError!){
-            if error{
+            if (error != nil){
                 println(error)
             }
             
@@ -92,7 +92,7 @@ class CloudKitManager:NSObject{
     func initPrivateZone(){
         
         func recordZoneSaved(zone:CKRecordZone?, error:NSError?){
-            if error{
+            if (error != nil){
                 println("failed to save record zone")
                 println(error)
                 return

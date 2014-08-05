@@ -27,7 +27,7 @@ class BookItemTag: CKEntity {
         return self.getCloudKitRecord(super.cloudKitPublicRecord)
     }
     
-    public override func getCloudKitRecord(record:CKRecord) -> CKRecord{
+    internal override func getCloudKitRecord(record:CKRecord) -> CKRecord{
         let thisRecord = super.getCloudKitRecord(record)
         thisRecord.setObject(self.tag, forKey: "tag")
         return thisRecord

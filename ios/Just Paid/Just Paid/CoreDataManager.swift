@@ -71,7 +71,7 @@ class CoreDataManager:NSObject {
 
         let coordinator = self.persistentStoreCoordinator
         
-        if !coordinator{
+        if (coordinator == nil){
             return nil
         }
         
@@ -107,7 +107,7 @@ class CoreDataManager:NSObject {
         
         
         // loop the list, sync the object if it comforts with CKEntityProtocal
-        if combinedSet{
+        if (combinedSet == nil){
             for object in combinedSet!{
                 if let cloudKitObject = object as? CKEntityProtocol{
                     cloudKitObject.sync()

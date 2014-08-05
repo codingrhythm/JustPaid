@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142101581990419D001994CA /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142101571990419D001994CA /* DataSource.swift */; };
 		143E6747197E4AC100FB32E5 /* BookItemReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143E6746197E4AC100FB32E5 /* BookItemReminder.swift */; };
 		143E674D197E4CFF00FB32E5 /* TimelineRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143E674C197E4CFF00FB32E5 /* TimelineRootViewController.swift */; };
 		143E6751197E4D4100FB32E5 /* BookItemRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143E6750197E4D4100FB32E5 /* BookItemRootViewController.swift */; };
@@ -16,6 +17,7 @@
 		1462ED4619734214004862EC /* Just_PaidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462ED4519734214004862EC /* Just_PaidTests.swift */; };
 		14948989198E2A39002F794E /* FamilyBookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14948988198E2A39002F794E /* FamilyBookDetailViewController.swift */; };
 		1494898B198E2A81002F794E /* FamilyBookNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1494898A198E2A81002F794E /* FamilyBookNavigationController.swift */; };
+		1494898E198EF1A9002F794E /* MemeberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1494898D198EF1A9002F794E /* MemeberCell.swift */; };
 		1494C6FE197DCD62006AF4E4 /* BookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1494C6FD197DCD62006AF4E4 /* BookItem.swift */; };
 		1494C700197DCDB1006AF4E4 /* BookKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1494C6FF197DCDB1006AF4E4 /* BookKeeper.swift */; };
 		1494C702197DCDB2006AF4E4 /* FamilyBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1494C701197DCDB2006AF4E4 /* FamilyBook.swift */; };
@@ -38,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		142101571990419D001994CA /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		143E6746197E4AC100FB32E5 /* BookItemReminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookItemReminder.swift; sourceTree = "<group>"; };
 		143E674C197E4CFF00FB32E5 /* TimelineRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineRootViewController.swift; sourceTree = "<group>"; };
 		143E6750197E4D4100FB32E5 /* BookItemRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookItemRootViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		1462ED4519734214004862EC /* Just_PaidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just_PaidTests.swift; sourceTree = "<group>"; };
 		14948988198E2A39002F794E /* FamilyBookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBookDetailViewController.swift; sourceTree = "<group>"; };
 		1494898A198E2A81002F794E /* FamilyBookNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBookNavigationController.swift; sourceTree = "<group>"; };
+		1494898D198EF1A9002F794E /* MemeberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeberCell.swift; sourceTree = "<group>"; };
 		1494C6FD197DCD62006AF4E4 /* BookItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookItem.swift; sourceTree = "<group>"; };
 		1494C6FF197DCDB1006AF4E4 /* BookKeeper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookKeeper.swift; sourceTree = "<group>"; };
 		1494C701197DCDB2006AF4E4 /* FamilyBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBook.swift; sourceTree = "<group>"; };
@@ -82,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1421015619904180001994CA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				142101571990419D001994CA /* DataSource.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		143E6748197E4C4100FB32E5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +115,7 @@
 		143E674A197E4C9500FB32E5 /* Family Book View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1494898C198EF18B002F794E /* Cells */,
 				14948988198E2A39002F794E /* FamilyBookDetailViewController.swift */,
 				1494898A198E2A81002F794E /* FamilyBookNavigationController.swift */,
 			);
@@ -139,6 +152,7 @@
 		1462ED2D19734214004862EC /* Just Paid */ = {
 			isa = PBXGroup;
 			children = (
+				1421015619904180001994CA /* Helpers */,
 				14A43DF0197F880D00E483E2 /* Just Paid.entitlements */,
 				143E6748197E4C4100FB32E5 /* Controllers */,
 				14999A531977B72700F8C4A0 /* Managers */,
@@ -174,6 +188,14 @@
 				1462ED4419734214004862EC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1494898C198EF18B002F794E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1494898D198EF1A9002F794E /* MemeberCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		14999A531977B72700F8C4A0 /* Managers */ = {
@@ -310,6 +332,7 @@
 				1462ED3119734214004862EC /* AppDelegate.swift in Sources */,
 				143E6751197E4D4100FB32E5 /* BookItemRootViewController.swift in Sources */,
 				14A43DF4197F8EF100E483E2 /* CloudKitManager.swift in Sources */,
+				142101581990419D001994CA /* DataSource.swift in Sources */,
 				1494898B198E2A81002F794E /* FamilyBookNavigationController.swift in Sources */,
 				1494C700197DCDB1006AF4E4 /* BookKeeper.swift in Sources */,
 				14999A551977B76300F8C4A0 /* CoreDataManager.swift in Sources */,
@@ -317,6 +340,7 @@
 				143E6747197E4AC100FB32E5 /* BookItemReminder.swift in Sources */,
 				1494C70A197DCF40006AF4E4 /* BookItemTag.swift in Sources */,
 				143E674D197E4CFF00FB32E5 /* TimelineRootViewController.swift in Sources */,
+				1494898E198EF1A9002F794E /* MemeberCell.swift in Sources */,
 				14E15EE01973BE34002D2DF1 /* JustPaidModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

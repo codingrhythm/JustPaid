@@ -64,16 +64,16 @@ class CKEntity: NSManagedObject, CKEntityProtocol {
         return record
     }
     
-    init(entity: NSEntityDescription!, insertIntoManagedObjectContext context: NSManagedObjectContext!) {
+    override init(entity: NSEntityDescription!, insertIntoManagedObjectContext context: NSManagedObjectContext!) {
         super.init(entity: entity, insertIntoManagedObjectContext: context)
     }
     
     // Sync with public database
-    public func syncWithPublicDB(){
+    internal func syncWithPublicDB(){
         
         // record save handler
         func recordSaved(record:CKRecord?, error:NSError?){
-            if error{
+            if (error != nil){
                 // handle the error
                 println(error)
                 return
@@ -90,7 +90,7 @@ class CKEntity: NSManagedObject, CKEntityProtocol {
     private func syncWithPrivateDB(){
         // record save handler
         func recordSaved(record:CKRecord?, error:NSError?){
-            if error{
+            if (error != nil){
                 // handle the error
                 println(error)
                 return
@@ -105,7 +105,7 @@ class CKEntity: NSManagedObject, CKEntityProtocol {
         }
         
         func recordDeleted(recordID:CKRecordID?, error:NSError?){
-            if error{
+            if (error != nil){
                 println(error)
                 return
             }
@@ -130,7 +130,7 @@ class CKEntity: NSManagedObject, CKEntityProtocol {
             // update the old record
             
             func recordFetched(record:CKRecord?, error:NSError?){
-                if error{
+                if (error != nil){
                     // handle the error
                     println(error)
                     return
@@ -153,11 +153,11 @@ class CKEntity: NSManagedObject, CKEntityProtocol {
     }
     
     
-    public func getCloudKitRecord(record:CKRecord) -> CKRecord{
+    internal func getCloudKitRecord(record:CKRecord) -> CKRecord{
         return record
     }
     
-    public func sync() {
+    internal func sync() {
         if self.ck_privateSyncStatus == SyncStatusDeleted{
             // this record is deleted
             self.syncWithPrivateDB()
@@ -179,7 +179,7 @@ class CKEntity: NSManagedObject, CKEntityProtocol {
         }
     }
     
-    public func markAsDeleted() {
+    internal func markAsDeleted() {
         self.ck_privateSyncStatus = SyncStatusDeleted
         self.ck_publicSyncStatus = SyncStatusDeleted
         self.managedObjectContext.save(nil)
