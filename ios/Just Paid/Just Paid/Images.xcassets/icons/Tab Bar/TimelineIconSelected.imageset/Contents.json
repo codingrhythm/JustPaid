@@ -1,17 +1,14 @@
 {
   "images" : [
     {
-      "idiom" : "universal"
-    },
-    {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "btn_add.png"
+      "filename" : "ico_timeline_selected.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "btn_add@2x.png"
+      "filename" : "ico_timeline_selected@2x.png"
     }
   ],
   "info" : {

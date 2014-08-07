@@ -8,8 +8,11 @@
         <scene sceneID="236-n6-SBd">
             <objects>
                 <navigationController id="Pq4-KS-UTb" customClass="FamilyBookNavigationController" customModule="Just_Paid" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="FamilyBookIcon" id="PTq-s0-mXO">
+                    <tabBarItem key="tabBarItem" title="" image="FamilyBookIcon" id="PTq-s0-mXO" customClass="JPTabBarItem" customModule="Just_Paid" customModuleProvider="target">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="selectedImageName" value="FamilyBookIconSelected"/>
+                        </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v9Z-03-wza">
@@ -45,7 +48,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FamilyBookBackground" translatesAutoresizingMaskIntoConstraints="NO" id="oPC-Fc-AVI">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$579,435.71" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07G-Ec-1ew">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 579,435.71" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07G-Ec-1ew">
                                         <rect key="frame" x="50" y="107" width="220" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="naY-US-ghn"/>
@@ -382,8 +385,11 @@
                             <constraint firstItem="iQr-d4-Ar2" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailing" id="GCv-eZ-Lr1"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="TimelineIcon" id="acW-dT-cKf">
+                    <tabBarItem key="tabBarItem" title="" image="TimelineIcon" id="acW-dT-cKf" customClass="JPTabBarItem" customModule="Just_Paid" customModuleProvider="target">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="selectedImageName" value="TimelineIconSelected"/>
+                        </userDefinedRuntimeAttributes>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -460,8 +466,11 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="addButton" id="cPa-gy-q4n">
+                    <tabBarItem key="tabBarItem" title="" image="BookItemIcon" id="cPa-gy-q4n" customClass="JPAddTabBarItem" customModule="Just_Paid" customModuleProvider="target">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="selectedImageName" value="BookItemIconSelected"/>
+                        </userDefinedRuntimeAttributes>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -490,12 +499,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BookItemIcon" width="46" height="45"/>
         <image name="DeleteIcon" width="16" height="20"/>
         <image name="FamilyBookBackground" width="320" height="250"/>
-        <image name="FamilyBookIcon" width="36" height="36"/>
+        <image name="FamilyBookIcon" width="35" height="35"/>
         <image name="InviteIcon" width="19" height="19"/>
         <image name="TimelineIcon" width="35" height="36"/>
-        <image name="addButton" width="45" height="45"/>
         <image name="addIcon" width="15" height="15"/>
         <image name="leftArrowIcon" width="12" height="20"/>
         <image name="ownerIcon" width="17" height="18"/>
