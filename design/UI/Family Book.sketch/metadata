@@ -13,13 +13,10 @@
 		<string>HelveticaNeue</string>
 		<string>HelveticaNeue-Light</string>
 		<string>HelveticaNeue-Thin</string>
+		<string>HelveticaNeue-Medium</string>
 	</array>
 	<key>length</key>
-<<<<<<< HEAD
-	<integer>11613789</integer>
-=======
-	<integer>10460758</integer>
->>>>>>> FETCH_HEAD
+	<integer>12219992</integer>
 	<key>version</key>
 	<integer>37</integer>
 </dict>
