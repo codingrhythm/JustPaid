@@ -8,9 +8,12 @@
 
 import UIKit
 
-class FamilyBookDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FamilyBookDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, UITextFieldDelegate {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var nameButton: UIButton!
+    
     var members: NSMutableArray = []
     
     override func viewDidLoad() {
@@ -38,15 +41,67 @@ class FamilyBookDetailViewController: UIViewController, UITableViewDataSource, U
     
     // MARK: - UITableView Delegate
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return self.members.count
+        return self.members.count + 1
+    }
+    
+    func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        if indexPath.row < self.members.count{
+            return 100
+        }else{
+            return 69
+        }
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell:MemeberCell = tableView.dequeueReusableCellWithIdentifier("Member Cell") as MemeberCell
-        
-        let member:NSMutableDictionary = self.members[indexPath.row] as NSMutableDictionary
-        cell.member = member
-        
-        return cell
+        if indexPath.row < self.members.count{
+            let cell:MemeberCell = tableView.dequeueReusableCellWithIdentifier("Member Cell") as MemeberCell
+            
+            let member:NSMutableDictionary = self.members[indexPath.row] as NSMutableDictionary
+            cell.member = member
+            
+            return cell
+        }else{
+            let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("Actions Cell") as UITableViewCell
+            return cell
+        }
     }
+    
+    // MARK: - Handle Delete action
+    @IBAction func deleteButtonTapped(sender:AnyObject!){
+        let actionSheet:UIActionSheet = UIActionSheet(title: "All members will not be able to access this family book again. Are you sure you want to delete this family book?", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: "Delete")
+        actionSheet.showInView(self.view)
+        
+    }
+    
+    func actionSheet(actionSheet: UIActionSheet!, clickedButtonAtIndex buttonIndex: Int) {
+        println(buttonIndex)
+    }
+    
+    // MARK: - Rename feature
+    @IBAction func nameLabelTapped(sender:AnyObject!){
+        UIView.animateWithDuration(0.25, animations: {
+            self.nameButton.alpha = 0
+            self.nameTextField.alpha = 1
+        })
+        
+        self.nameTextField.becomeFirstResponder()
+        
+    }
+    
+    @IBAction func dismissKeyboard(sender:AnyObject!){
+        
+        self.nameTextField.resignFirstResponder()
+        
+        UIView.animateWithDuration(0.25, animations: {
+            self.nameButton.alpha = 1
+            self.nameTextField.alpha = 0
+        })
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        self.dismissKeyboard(nil)
+        return true
+    }
+    
 }

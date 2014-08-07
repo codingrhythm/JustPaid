@@ -9,7 +9,7 @@
 import UIKit
 
 class TimelineRootViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +31,5 @@ class TimelineRootViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
