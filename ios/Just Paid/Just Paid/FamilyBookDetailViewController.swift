@@ -8,19 +8,21 @@
 
 import UIKit
 
-class FamilyBookDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, UITextFieldDelegate {
+class FamilyBookDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var nameButton: UIButton!
     
     var members: NSMutableArray = []
+    var categories: [Dictionary<String, Any>] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         members = dataSource.familyBookMembers
+        categories = dataSource.familyBookCategories
     }
     
     override func didReceiveMemoryWarning() {
@@ -102,6 +104,19 @@ class FamilyBookDetailViewController: UIViewController, UITableViewDataSource, U
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         self.dismissKeyboard(nil)
         return true
+    }
+    
+    // MARK: - UICollectionView Delegate
+    func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int {
+        return categories.count
+    }
+    
+    func collectionView(collectionView: UICollectionView!, cellForItemAtIndexPath indexPath: NSIndexPath!) -> UICollectionViewCell! {
+        let cell:FamilyBookCategoryCell = collectionView.dequeueReusableCellWithReuseIdentifier("Family Book Category Cell", forIndexPath: indexPath) as FamilyBookCategoryCell
+        
+        cell.category = categories[indexPath.row]
+        
+        return cell
     }
     
 }

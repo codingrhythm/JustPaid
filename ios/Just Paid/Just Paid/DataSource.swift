@@ -32,4 +32,19 @@ class DataSource{
         
         return dataSet
     }()
+    
+    var familyBookCategories:[Dictionary<String, Any>] = {
+        let dataSet:[Dictionary<String, Any>] = [
+            ["name":"clothes", "percent":0.3],
+            ["name":"entertainment", "percent":0.25],
+            ["name":"pet", "percent":0.22],
+            ["name":"restaurant", "percent":0.15],
+            ["name":"supermarket", "percent":0.08],
+            ["name":"pet", "percent":0.22],
+            ["name":"restaurant", "percent":0.15],
+            ["name":"supermarket", "percent":0.08]
+        ]
+        
+        return dataSet
+    }()
 }

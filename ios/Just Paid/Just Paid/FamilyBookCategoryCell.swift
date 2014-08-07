@@ -14,13 +14,21 @@ class FamilyBookCategoryCell: UICollectionViewCell {
     var backgroundRingLayer: CAShapeLayer!
     var ringLayer: CAShapeLayer!
     
-    @IBInspectable var rating: Double = 0.6 {
+    @IBOutlet var icon:UIImageView!
+    
+    var category:Dictionary<String, Any>!{
         didSet{
             updateLayerProperties()
         }
     }
     
-    var lineWidth: CGFloat = 2.0 {
+    @IBInspectable var rating: Double = 0.5 {
+        didSet{
+            updateLayerProperties()
+        }
+    }
+    
+    var lineWidth: CGFloat = 1.0 {
         didSet{
             updateLayerProperties()
         }
@@ -56,6 +64,7 @@ class FamilyBookCategoryCell: UICollectionViewCell {
             ringLayer.strokeColor = UIColor(red: 37.0/255.0, green: 155.0/255.0, blue: 36.0/255.0, alpha: 1.0).CGColor
             ringLayer.anchorPoint = CGPointMake(0.5, 0.5)
             ringLayer.transform = CATransform3DRotate(ringLayer.transform, -CGFloat(M_PI) / 2, 0, 0, 1)
+            ringLayer.strokeEnd = 0
             layer.addSublayer(ringLayer)
         }
         
@@ -65,8 +74,15 @@ class FamilyBookCategoryCell: UICollectionViewCell {
     }
     
     func updateLayerProperties(){
-        if ringLayer{
-            ringLayer.strokeEnd = CGFloat(rating)
+        var _rating = rating
+        
+        if category{
+            _rating = category["percent"] as Double
+            icon.image = UIImage(named: category["name"] as String + "Icon")
+        }
+        
+        if (ringLayer != nil){
+            ringLayer.strokeEnd = CGFloat(_rating)
         }
     }
 }

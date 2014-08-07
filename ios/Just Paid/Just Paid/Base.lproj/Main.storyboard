@@ -83,17 +83,17 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xgK-0Q-cz2">
-                                        <rect key="frame" x="30" y="201" width="260" height="33"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xgK-0Q-cz2">
+                                        <rect key="frame" x="0.0" y="201" width="320" height="33"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="ZKK-wt-Kvm"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ODG-2x-KZP">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="12" id="ODG-2x-KZP">
                                             <size key="itemSize" width="33" height="33"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <inset key="sectionInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Family Book Category Cell" id="0az-qc-rM5" customClass="FamilyBookCategoryCell" customModule="Just_Paid" customModuleProvider="target">
@@ -102,15 +102,28 @@
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nhI-Cr-Dkn">
+                                                            <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
+                                                        </imageView>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                                        <real key="value" value="0.5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
+                                                <constraints>
+                                                    <constraint firstItem="nhI-Cr-Dkn" firstAttribute="leading" secondItem="0az-qc-rM5" secondAttribute="leading" id="1lD-zE-kpY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="nhI-Cr-Dkn" secondAttribute="bottom" id="a1K-hR-3eP"/>
+                                                    <constraint firstItem="nhI-Cr-Dkn" firstAttribute="top" secondItem="0az-qc-rM5" secondAttribute="top" id="adH-MM-WCq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="nhI-Cr-Dkn" secondAttribute="trailing" id="z7m-RC-hWu"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="icon" destination="nhI-Cr-Dkn" id="Eqa-st-nJp"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="rkU-zh-mj1" id="mad-2o-N4N"/>
+                                            <outlet property="delegate" destination="rkU-zh-mj1" id="YgI-Zw-Gy7"/>
+                                        </connections>
                                     </collectionView>
                                     <textField opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Zack &amp; Erin" borderStyle="roundedRect" placeholder="Family Book Name" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2OK-6R-dhs">
                                         <rect key="frame" x="50" y="61" width="220" height="30"/>
@@ -121,7 +134,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.3921568627" green="0.86666666670000003" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" returnKeyType="done"/>
                                         <connections>
                                             <outlet property="delegate" destination="rkU-zh-mj1" id="kP7-Aq-9o4"/>
                                             <outletCollection property="gestureRecognizers" destination="0xN-pU-SHg" appends="YES" id="BSH-27-aXB"/>
@@ -146,9 +159,9 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="QwB-5Y-VB5" secondAttribute="trailing" constant="50" id="2H4-cA-K5Y"/>
                                     <constraint firstItem="uNf-oB-4dY" firstAttribute="top" secondItem="lq8-Jw-pAU" secondAttribute="top" constant="106" id="C78-vk-gFy"/>
-                                    <constraint firstItem="xgK-0Q-cz2" firstAttribute="leading" secondItem="lq8-Jw-pAU" secondAttribute="leading" constant="30" id="HWm-N4-hnU"/>
+                                    <constraint firstItem="xgK-0Q-cz2" firstAttribute="leading" secondItem="lq8-Jw-pAU" secondAttribute="leading" id="HWm-N4-hnU"/>
                                     <constraint firstItem="6lN-j8-0Pi" firstAttribute="leading" secondItem="lq8-Jw-pAU" secondAttribute="leading" constant="50" id="I9t-IX-pRp"/>
-                                    <constraint firstAttribute="trailing" secondItem="xgK-0Q-cz2" secondAttribute="trailing" constant="30" id="Iap-xW-MgE"/>
+                                    <constraint firstAttribute="trailing" secondItem="xgK-0Q-cz2" secondAttribute="trailing" id="Iap-xW-MgE"/>
                                     <constraint firstAttribute="bottom" secondItem="oPC-Fc-AVI" secondAttribute="bottom" id="J18-Cr-sm9"/>
                                     <constraint firstAttribute="trailing" secondItem="07G-Ec-1ew" secondAttribute="trailing" constant="50" id="KZm-Os-oqK"/>
                                     <constraint firstAttribute="trailing" secondItem="6lN-j8-0Pi" secondAttribute="trailing" constant="50" id="MFr-pR-zPN"/>
