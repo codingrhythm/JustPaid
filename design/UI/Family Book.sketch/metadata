@@ -15,7 +15,11 @@
 		<string>HelveticaNeue-Thin</string>
 	</array>
 	<key>length</key>
+<<<<<<< HEAD
 	<integer>11613789</integer>
+=======
+	<integer>10460758</integer>
+>>>>>>> FETCH_HEAD
 	<key>version</key>
 	<integer>37</integer>
 </dict>

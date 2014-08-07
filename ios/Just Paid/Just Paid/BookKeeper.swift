@@ -1,5 +1,5 @@
 //
-//  FamilyBook.swift
+//  BookKeeper.swift
 //  Just Paid
 //
 //  Created by Zack Zhu on 22/07/2014.
@@ -9,9 +9,10 @@
 import Foundation
 import CoreData
 
-class FamilyBook: CKEntity {
+class BookKeeper: CKEntity {
 
+    @NSManaged var identifier: String
+    @NSManaged var isLocal: NSNumber
     @NSManaged var name: String
-    @NSManaged var ownerID: String
 
 }
