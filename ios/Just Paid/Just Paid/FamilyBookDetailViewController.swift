@@ -14,7 +14,7 @@ class FamilyBookDetailViewController: UIViewController, UITableViewDataSource, U
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var nameButton: UIButton!
-    @IBOutlet var amountLabel: JPCurrencyLabel!
+    @IBOutlet var amountLabel: JPAnimatedCurrencyLabel!
     
     var members: NSMutableArray = []
     var categories: [Dictionary<String, Any>] = []
@@ -25,6 +25,11 @@ class FamilyBookDetailViewController: UIViewController, UITableViewDataSource, U
         // Do any additional setup after loading the view.
         members = dataSource.familyBookMembers
         categories = dataSource.familyBookCategories
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         amountLabel.amount = 57612.43
     }
     
@@ -120,6 +125,15 @@ class FamilyBookDetailViewController: UIViewController, UITableViewDataSource, U
         cell.category = categories[indexPath.row]
         
         return cell
+    }
+    
+    // MARK: - Button actions
+    @IBAction func leftArrowButtonTapped(sender:AnyObject!){
+        amountLabel.amount = 8312.09
+    }
+    
+    @IBAction func rightArrowButtonTapped(sender:AnyObject!){
+        amountLabel.amount = 57612.43
     }
     
 }

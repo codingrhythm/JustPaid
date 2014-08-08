@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "Just_Paid.JPAnimatedCurrencyLabel.amountDidChanged (Just_Paid.JPAnimatedCurrencyLabel)(Swift.Float, to : Swift.Float) -&gt; ():JPAnimatedCurrencyLabel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.currentAmount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "Just_Paid.CoreDataManager.contextChanged (Just_Paid.CoreDataManager)(ObjectiveC.NSNotification) -&gt; ():CoreDataManager.swift">
          <PersistentStrings>
             <PersistentString
