@@ -10,13 +10,13 @@
 	<string>b2079fe10151ad0eef6cc553b7369ec78d67b9b5</string>
 	<key>fonts</key>
 	<array>
-		<string>HelveticaNeue</string>
-		<string>HelveticaNeue-Light</string>
 		<string>HelveticaNeue-Thin</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue</string>
 		<string>HelveticaNeue-Medium</string>
 	</array>
 	<key>length</key>
-	<integer>13004186</integer>
+	<integer>13703020</integer>
 	<key>version</key>
 	<integer>37</integer>
 </dict>
