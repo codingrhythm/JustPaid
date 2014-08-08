@@ -11,8 +11,10 @@ import UIKit
 class FamilyBookDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var nameButton: UIButton!
+    @IBOutlet var amountLabel: JPCurrencyLabel!
     
     var members: NSMutableArray = []
     var categories: [Dictionary<String, Any>] = []
@@ -23,6 +25,7 @@ class FamilyBookDetailViewController: UIViewController, UITableViewDataSource, U
         // Do any additional setup after loading the view.
         members = dataSource.familyBookMembers
         categories = dataSource.familyBookCategories
+        amountLabel.amount = 57612.43
     }
     
     override func didReceiveMemoryWarning() {

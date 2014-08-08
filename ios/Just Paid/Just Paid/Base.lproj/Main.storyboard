@@ -48,7 +48,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FamilyBookBackground" translatesAutoresizingMaskIntoConstraints="NO" id="oPC-Fc-AVI">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 579,435.71" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07G-Ec-1ew">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07G-Ec-1ew" customClass="JPAnimatedCurrencyLabel" customModule="Just_Paid" customModuleProvider="target">
                                         <rect key="frame" x="50" y="107" width="220" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="naY-US-ghn"/>
@@ -346,6 +346,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="amountLabel" destination="07G-Ec-1ew" id="80Y-Ic-a37"/>
+                        <outlet property="collectionView" destination="xgK-0Q-cz2" id="2ar-0r-5jK"/>
                         <outlet property="nameButton" destination="6lN-j8-0Pi" id="bAU-92-D1S"/>
                         <outlet property="nameTextField" destination="2OK-6R-dhs" id="Bjl-zs-h7m"/>
                         <outlet property="tableView" destination="7zA-dW-QuX" id="79e-cc-OWF"/>

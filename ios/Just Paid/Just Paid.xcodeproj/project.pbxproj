@@ -29,6 +29,8 @@
 		14E15EE01973BE34002D2DF1 /* JustPaidModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14E15EDE1973BE34002D2DF1 /* JustPaidModel.xcdatamodeld */; };
 		14E70D7D19938ABC0043994E /* JPTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E70D7C19938ABC0043994E /* JPTabBarItem.swift */; };
 		14E70D7F199399660043994E /* JPAddTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E70D7E199399660043994E /* JPAddTabBarItem.swift */; };
+		14E70D83199435EC0043994E /* JPCurrencyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E70D82199435EC0043994E /* JPCurrencyLabel.swift */; };
+		14E70D85199438950043994E /* JPAnimatedCurrencyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E70D84199438950043994E /* JPAnimatedCurrencyLabel.swift */; };
 		14ECC1A21992E2F200F0B074 /* FamilyBookCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECC1A11992E2F200F0B074 /* FamilyBookCategoryCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		14E15EDF1973BE34002D2DF1 /* JustPaidModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JustPaidModel.xcdatamodel; sourceTree = "<group>"; };
 		14E70D7C19938ABC0043994E /* JPTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPTabBarItem.swift; sourceTree = "<group>"; };
 		14E70D7E199399660043994E /* JPAddTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPAddTabBarItem.swift; sourceTree = "<group>"; };
+		14E70D82199435EC0043994E /* JPCurrencyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPCurrencyLabel.swift; sourceTree = "<group>"; };
+		14E70D84199438950043994E /* JPAnimatedCurrencyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPAnimatedCurrencyLabel.swift; sourceTree = "<group>"; };
 		14ECC1A11992E2F200F0B074 /* FamilyBookCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBookCategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,6 +238,8 @@
 			children = (
 				14E70D7C19938ABC0043994E /* JPTabBarItem.swift */,
 				14E70D7E199399660043994E /* JPAddTabBarItem.swift */,
+				14E70D82199435EC0043994E /* JPCurrencyLabel.swift */,
+				14E70D84199438950043994E /* JPAnimatedCurrencyLabel.swift */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -352,7 +358,9 @@
 				143E6751197E4D4100FB32E5 /* BookItemRootViewController.swift in Sources */,
 				14A43DF4197F8EF100E483E2 /* CloudKitManager.swift in Sources */,
 				142101581990419D001994CA /* DataSource.swift in Sources */,
+				14E70D83199435EC0043994E /* JPCurrencyLabel.swift in Sources */,
 				1494898B198E2A81002F794E /* FamilyBookNavigationController.swift in Sources */,
+				14E70D85199438950043994E /* JPAnimatedCurrencyLabel.swift in Sources */,
 				1494C700197DCDB1006AF4E4 /* BookKeeper.swift in Sources */,
 				14999A551977B76300F8C4A0 /* CoreDataManager.swift in Sources */,
 				1494C6FE197DCD62006AF4E4 /* BookItem.swift in Sources */,

@@ -82,7 +82,8 @@ class FamilyBookCategoryCell: UICollectionViewCell {
         }
         
         if (ringLayer != nil){
-            ringLayer.strokeEnd = CGFloat(_rating)
+            self.ringLayer.strokeEnd = CGFloat(_rating)
+            
         }
     }
 }
