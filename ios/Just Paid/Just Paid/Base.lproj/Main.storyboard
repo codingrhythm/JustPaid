@@ -63,7 +63,7 @@
                                             <constraint firstAttribute="height" constant="14" id="fFZ-x9-sOR"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeI-vC-wql">
