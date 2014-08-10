@@ -15,6 +15,10 @@
 		1462ED3819734214004862EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1462ED3619734214004862EC /* Main.storyboard */; };
 		1462ED3A19734214004862EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1462ED3919734214004862EC /* Images.xcassets */; };
 		1462ED4619734214004862EC /* Just_PaidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462ED4519734214004862EC /* Just_PaidTests.swift */; };
+		1493235A199828430025B0EF /* FamilyBookWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14932359199828430025B0EF /* FamilyBookWelcomeViewController.swift */; };
+		1493235C199829E10025B0EF /* FamilyBookJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493235B199829E10025B0EF /* FamilyBookJoinViewController.swift */; };
+		1493235F19982D180025B0EF /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493235E19982D180025B0EF /* DismissSegue.swift */; };
+		1493236119982E3D0025B0EF /* FamilyBookInviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493236019982E3D0025B0EF /* FamilyBookInviteViewController.swift */; };
 		14948989198E2A39002F794E /* FamilyBookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14948988198E2A39002F794E /* FamilyBookDetailViewController.swift */; };
 		1494898B198E2A81002F794E /* FamilyBookNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1494898A198E2A81002F794E /* FamilyBookNavigationController.swift */; };
 		1494898E198EF1A9002F794E /* MemeberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1494898D198EF1A9002F794E /* MemeberCell.swift */; };
@@ -57,6 +61,10 @@
 		1462ED3F19734214004862EC /* Just PaidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Just PaidTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1462ED4419734214004862EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1462ED4519734214004862EC /* Just_PaidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just_PaidTests.swift; sourceTree = "<group>"; };
+		14932359199828430025B0EF /* FamilyBookWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBookWelcomeViewController.swift; sourceTree = "<group>"; };
+		1493235B199829E10025B0EF /* FamilyBookJoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBookJoinViewController.swift; sourceTree = "<group>"; };
+		1493235E19982D180025B0EF /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
+		1493236019982E3D0025B0EF /* FamilyBookInviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBookInviteViewController.swift; sourceTree = "<group>"; };
 		14948988198E2A39002F794E /* FamilyBookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBookDetailViewController.swift; sourceTree = "<group>"; };
 		1494898A198E2A81002F794E /* FamilyBookNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBookNavigationController.swift; sourceTree = "<group>"; };
 		1494898D198EF1A9002F794E /* MemeberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeberCell.swift; sourceTree = "<group>"; };
@@ -128,6 +136,9 @@
 				1494898C198EF18B002F794E /* Cells */,
 				14948988198E2A39002F794E /* FamilyBookDetailViewController.swift */,
 				1494898A198E2A81002F794E /* FamilyBookNavigationController.swift */,
+				14932359199828430025B0EF /* FamilyBookWelcomeViewController.swift */,
+				1493235B199829E10025B0EF /* FamilyBookJoinViewController.swift */,
+				1493236019982E3D0025B0EF /* FamilyBookInviteViewController.swift */,
 			);
 			name = "Family Book View Controllers";
 			sourceTree = "<group>";
@@ -162,6 +173,7 @@
 		1462ED2D19734214004862EC /* Just Paid */ = {
 			isa = PBXGroup;
 			children = (
+				1493235D19982CEB0025B0EF /* Segues */,
 				14E70D7B19938A920043994E /* Controls */,
 				1421015619904180001994CA /* Helpers */,
 				14A43DF0197F880D00E483E2 /* Just Paid.entitlements */,
@@ -199,6 +211,14 @@
 				1462ED4419734214004862EC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1493235D19982CEB0025B0EF /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				1493235E19982D180025B0EF /* DismissSegue.swift */,
+			);
+			name = Segues;
 			sourceTree = "<group>";
 		};
 		1494898C198EF18B002F794E /* Cells */ = {
@@ -359,6 +379,7 @@
 				14A43DF4197F8EF100E483E2 /* CloudKitManager.swift in Sources */,
 				142101581990419D001994CA /* DataSource.swift in Sources */,
 				14E70D83199435EC0043994E /* JPCurrencyLabel.swift in Sources */,
+				1493235F19982D180025B0EF /* DismissSegue.swift in Sources */,
 				1494898B198E2A81002F794E /* FamilyBookNavigationController.swift in Sources */,
 				14E70D85199438950043994E /* JPAnimatedCurrencyLabel.swift in Sources */,
 				1494C700197DCDB1006AF4E4 /* BookKeeper.swift in Sources */,
@@ -367,8 +388,11 @@
 				143E6747197E4AC100FB32E5 /* BookItemReminder.swift in Sources */,
 				1494C70A197DCF40006AF4E4 /* BookItemTag.swift in Sources */,
 				14E70D7F199399660043994E /* JPAddTabBarItem.swift in Sources */,
+				1493235C199829E10025B0EF /* FamilyBookJoinViewController.swift in Sources */,
+				1493236119982E3D0025B0EF /* FamilyBookInviteViewController.swift in Sources */,
 				143E674D197E4CFF00FB32E5 /* TimelineRootViewController.swift in Sources */,
 				1494898E198EF1A9002F794E /* MemeberCell.swift in Sources */,
+				1493235A199828430025B0EF /* FamilyBookWelcomeViewController.swift in Sources */,
 				14E15EE01973BE34002D2DF1 /* JustPaidModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

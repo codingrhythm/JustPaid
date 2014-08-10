@@ -23,12 +23,77 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="rkU-zh-mj1" kind="relationship" relationship="rootViewController" id="uXi-RY-Gc6"/>
+                        <segue destination="AYA-pX-Rk7" kind="relationship" relationship="rootViewController" id="Q2k-CA-2Ot"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gex-fj-INu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="755" y="-1090"/>
+        </scene>
+        <!--Family Book Welcome View Controller-->
+        <scene sceneID="2K8-OC-3mH">
+            <objects>
+                <viewController id="AYA-pX-Rk7" customClass="FamilyBookWelcomeViewController" customModule="Just_Paid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Acg-Dx-QvN"/>
+                        <viewControllerLayoutGuide type="bottom" id="cEG-vb-BDb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KqI-7P-UOp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04X-T1-kNf">
+                                <rect key="frame" x="59" y="159" width="30" height="30"/>
+                                <state key="normal" title="Join">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qRn-rM-uIj" kind="modal" identifier="Show Family Book Join View" id="avu-Z8-HpV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gId-Xo-Uca">
+                                <rect key="frame" x="43" y="225" width="46" height="30"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rkU-zh-mj1" kind="push" identifier="Show Family Book Detail View" id="umd-W2-2CQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tvS-BD-7Fk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ljf-fa-AOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="-1090"/>
+        </scene>
+        <!--Family Book Join View Controller-->
+        <scene sceneID="lLs-cv-wPO">
+            <objects>
+                <viewController id="qRn-rM-uIj" customClass="FamilyBookJoinViewController" customModule="Just_Paid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5SX-fB-Xs8"/>
+                        <viewControllerLayoutGuide type="bottom" id="OIc-xN-tmS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B1w-Hk-6Cp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8t-Sc-H33">
+                                <rect key="frame" x="258" y="8" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1G9-hR-vZH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1619" y="-1675"/>
         </scene>
         <!--Family Book Detail View Controller-->
         <scene sceneID="rB8-8C-I0O">
@@ -300,6 +365,9 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="tintColor" red="0.0" green="0.67450980392156867" blue="0.75686274509803919" alpha="1" colorSpace="deviceRGB"/>
                                                     <state key="normal" title="  Invite" image="InviteIcon"/>
+                                                    <connections>
+                                                        <segue destination="qrZ-hF-KSv" kind="modal" identifier="Show Family Book Invite View" id="bKy-N2-DoZ"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nH-nk-6yx">
                                                     <rect key="frame" x="160" y="0.0" width="160" height="69"/>
@@ -344,11 +412,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mye-eG-cgH">
-                        <barButtonItem key="leftBarButtonItem" title="Join" id="FqI-yR-7FX">
+                        <barButtonItem key="leftBarButtonItem" image="addIcon" id="FqI-yR-7FX">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="addIcon" id="OTE-t2-FRL">
+                        <barButtonItem key="rightBarButtonItem" title="Join" id="OTE-t2-FRL">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="qRn-rM-uIj" kind="modal" identifier="Show Family Book Join View" id="QLX-Ho-jz4"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -367,7 +438,36 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1528" y="-1090"/>
+            <point key="canvasLocation" x="1619" y="-1090"/>
+        </scene>
+        <!--Family Book Invite View Controller-->
+        <scene sceneID="t7x-TY-7Nt">
+            <objects>
+                <viewController id="qrZ-hF-KSv" customClass="FamilyBookInviteViewController" customModule="Just_Paid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1h6-2o-tst"/>
+                        <viewControllerLayoutGuide type="bottom" id="R5u-BZ-X9y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ban-3Y-27L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8H-e5-m6C">
+                                <rect key="frame" x="258" y="0.0" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rkU-zh-mj1" kind="custom" identifier="Dismiss Family Book Invite View" customClass="DismissSegue" id="0h6-pI-IMD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WxV-xE-Wp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2224" y="-1090"/>
         </scene>
         <!--Timeline Root View Controller-->
         <scene sceneID="hNz-n2-bh7">
@@ -527,4 +627,8 @@
             <size key="landscapeSize" width="480" height="320"/>
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="QLX-Ho-jz4"/>
+        <segue reference="0h6-pI-IMD"/>
+    </inferredMetricsTieBreakers>
 </document>
