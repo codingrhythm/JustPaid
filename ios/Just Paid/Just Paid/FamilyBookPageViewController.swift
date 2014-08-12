@@ -1,5 +1,5 @@
 //
-//  FamilyBookInviteViewController.swift
+//  FamilyBookPagedViewController.swift
 //  Just Paid
 //
 //  Created by Zack Zhu on 11/08/2014.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FamilyBookInviteViewController: UIViewController {
+class FamilyBookPagedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
