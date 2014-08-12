@@ -32,6 +32,7 @@
 		14E70D83199435EC0043994E /* JPCurrencyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E70D82199435EC0043994E /* JPCurrencyLabel.swift */; };
 		14E70D85199438950043994E /* JPAnimatedCurrencyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E70D84199438950043994E /* JPAnimatedCurrencyLabel.swift */; };
 		14ECC1A21992E2F200F0B074 /* FamilyBookCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECC1A11992E2F200F0B074 /* FamilyBookCategoryCell.swift */; };
+		14F0BC60199AD08E00AED501 /* FamilyBookJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0BC5F199AD08E00AED501 /* FamilyBookJoinViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		14E70D82199435EC0043994E /* JPCurrencyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPCurrencyLabel.swift; sourceTree = "<group>"; };
 		14E70D84199438950043994E /* JPAnimatedCurrencyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPAnimatedCurrencyLabel.swift; sourceTree = "<group>"; };
 		14ECC1A11992E2F200F0B074 /* FamilyBookCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBookCategoryCell.swift; sourceTree = "<group>"; };
+		14F0BC5F199AD08E00AED501 /* FamilyBookJoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBookJoinViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				1494898C198EF18B002F794E /* Cells */,
 				14948988198E2A39002F794E /* FamilyBookDetailViewController.swift */,
 				1494898A198E2A81002F794E /* FamilyBookNavigationController.swift */,
+				14F0BC5F199AD08E00AED501 /* FamilyBookJoinViewController.swift */,
 			);
 			name = "Family Book View Controllers";
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				1494C700197DCDB1006AF4E4 /* BookKeeper.swift in Sources */,
 				14999A551977B76300F8C4A0 /* CoreDataManager.swift in Sources */,
 				1494C6FE197DCD62006AF4E4 /* BookItem.swift in Sources */,
+				14F0BC60199AD08E00AED501 /* FamilyBookJoinViewController.swift in Sources */,
 				143E6747197E4AC100FB32E5 /* BookItemReminder.swift in Sources */,
 				1494C70A197DCF40006AF4E4 /* BookItemTag.swift in Sources */,
 				14E70D7F199399660043994E /* JPAddTabBarItem.swift in Sources */,

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Family Book Navigation Controller-->
@@ -23,12 +24,127 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="rkU-zh-mj1" kind="relationship" relationship="rootViewController" id="uXi-RY-Gc6"/>
+                        <segue destination="x4h-jn-44K" kind="relationship" relationship="rootViewController" id="kbf-9q-o51"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gex-fj-INu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="755" y="-1090"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dZX-1f-qh2">
+            <objects>
+                <viewController id="x4h-jn-44K" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Fe-Ig-RyW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cg9-tB-ndW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cse-A3-KKR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3n-pD-U1N">
+                                <rect key="frame" x="40" y="303" width="120" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="3hK-Nw-kKl"/>
+                                    <constraint firstAttribute="height" constant="44" id="GU9-3I-Yd4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleColor" red="0.56470588239999997" green="0.83529411760000005" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rkU-zh-mj1" kind="push" id="DBA-Cg-zxi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey, there!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZm-P2-bCt">
+                                <rect key="frame" x="16" y="127" width="288" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="JMH-Lc-lx8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="56J-H2-h2x">
+                                <rect key="frame" x="60" y="193" width="200" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Bwa-v1-vQ4"/>
+                                </constraints>
+                                <string key="text">Creat a Family Book or
+Join an existing Family Book 
+Track the money spending 
+with your beloved ones!</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uz-oB-NbH">
+                                <rect key="frame" x="160" y="303" width="120" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="90z-a0-c6H"/>
+                                    <constraint firstAttribute="height" constant="44" id="adK-8U-f44"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Join">
+                                    <color key="titleColor" red="0.0" green="0.67450980390000004" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="M5n-qU-ju0" kind="modal" id="Ili-YM-NyO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="56J-H2-h2x" firstAttribute="leading" secondItem="cse-A3-KKR" secondAttribute="leadingMargin" constant="44" id="6Cr-9i-UUB"/>
+                            <constraint firstItem="wZm-P2-bCt" firstAttribute="leading" secondItem="cse-A3-KKR" secondAttribute="leadingMargin" id="6hx-6n-qJT"/>
+                            <constraint firstItem="wZm-P2-bCt" firstAttribute="top" secondItem="2Fe-Ig-RyW" secondAttribute="bottom" constant="127" id="IgP-N5-Zu5"/>
+                            <constraint firstItem="b3n-pD-U1N" firstAttribute="top" secondItem="56J-H2-h2x" secondAttribute="bottom" constant="30" id="JCk-7g-ytx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="56J-H2-h2x" secondAttribute="trailing" constant="44" id="US4-9z-H5W"/>
+                            <constraint firstItem="56J-H2-h2x" firstAttribute="top" secondItem="wZm-P2-bCt" secondAttribute="bottom" constant="27" id="eop-Kl-l8v"/>
+                            <constraint firstAttribute="centerX" secondItem="b3n-pD-U1N" secondAttribute="centerX" constant="60" id="idd-R1-Z2f"/>
+                            <constraint firstItem="4Uz-oB-NbH" firstAttribute="top" secondItem="56J-H2-h2x" secondAttribute="bottom" constant="30" id="nNP-Si-wtK"/>
+                            <constraint firstAttribute="centerX" secondItem="4Uz-oB-NbH" secondAttribute="centerX" constant="-60" id="v7g-V1-DlI"/>
+                            <constraint firstItem="wZm-P2-bCt" firstAttribute="trailing" secondItem="cse-A3-KKR" secondAttribute="trailingMargin" id="xDk-Qc-Ogy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Td-4s-qQR"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTm-yz-eMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1193" y="-1090"/>
+        </scene>
+        <!--Family Book Join View Controller-->
+        <scene sceneID="fuE-0c-x6U">
+            <objects>
+                <viewController id="M5n-qU-ju0" customClass="FamilyBookJoinViewController" customModule="Just_Paid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zrp-eV-dpL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Grk-dc-nUn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I9P-HE-00T">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKy-D3-VqT">
+                                <rect key="frame" x="258" y="8" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButtonTapped:" destination="M5n-qU-ju0" eventType="touchUpInside" id="UIh-u1-tDy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yId-lQ-Zfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1624" y="-1674"/>
         </scene>
         <!--Family Book Detail View Controller-->
         <scene sceneID="rB8-8C-I0O">
@@ -57,7 +173,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September 2014" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwB-5Y-VB5">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Since Aug 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwB-5Y-VB5">
                                         <rect key="frame" x="50" y="157" width="220" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="fFZ-x9-sOR"/>
@@ -344,11 +460,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mye-eG-cgH">
-                        <barButtonItem key="leftBarButtonItem" title="Join" id="FqI-yR-7FX">
+                        <barButtonItem key="leftBarButtonItem" image="addIcon" id="FqI-yR-7FX">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="addIcon" id="OTE-t2-FRL">
+                        <barButtonItem key="rightBarButtonItem" title="Join" id="OTE-t2-FRL">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="M5n-qU-ju0" kind="modal" id="Qfm-8i-Pu9"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -367,7 +486,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1528" y="-1090"/>
+            <point key="canvasLocation" x="1624" y="-1090"/>
         </scene>
         <!--Timeline Root View Controller-->
         <scene sceneID="hNz-n2-bh7">
@@ -527,4 +646,7 @@
             <size key="landscapeSize" width="480" height="320"/>
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Qfm-8i-Pu9"/>
+    </inferredMetricsTieBreakers>
 </document>

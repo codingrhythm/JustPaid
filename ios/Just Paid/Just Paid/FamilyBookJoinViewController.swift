@@ -1,14 +1,14 @@
 //
-//  FamilyBookPagedViewController.swift
+//  FamilyBookJoinViewController.swift
 //  Just Paid
 //
-//  Created by Zack Zhu on 11/08/2014.
+//  Created by Zack Zhu on 13/08/2014.
 //  Copyright (c) 2014 Zack Zhu. All rights reserved.
 //
 
 import UIKit
 
-class FamilyBookPagedViewController: UIViewController {
+class FamilyBookJoinViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +31,9 @@ class FamilyBookPagedViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func dismissButtonTapped(sender:AnyObject!){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }
