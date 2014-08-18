@@ -16,21 +16,44 @@ class FamilyBookDetailViewController: UIViewController, UITableViewDataSource, U
     @IBOutlet var nameButton: UIButton!
     @IBOutlet var amountLabel: JPAnimatedCurrencyLabel!
     
-    var members: NSMutableArray = []
-    var categories: [Dictionary<String, Any>] = []
+    var members: [Dictionary<String, Any>] = []{
+        didSet{
+            tableView.reloadData()
+        }
+    }
+    
+    var categories: [Dictionary<String, Any>] = []{
+        didSet{
+            collectionView.reloadData()
+        }
+    }
+    var familyBooks: [Dictionary<String, Any>] = []
+    var familyBookIndex = 0
+    var familyBook:Dictionary<String, Any>!{
+        didSet{
+            amountLabel.amount = Float(familyBook["amount"] as Double)
+            nameButton.setTitle(familyBook["name"] as String, forState: UIControlState.Normal)
+            
+            if familyBookIndex % 2 == 0{
+                categories = dataSource.familyBookCategories
+                members = dataSource.familyBookMembers
+            }else{
+                categories = dataSource.familyBookCategories2
+                members = dataSource.familyBookMembers2
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        members = dataSource.familyBookMembers
-        categories = dataSource.familyBookCategories
-        
+        familyBooks = dataSource.familyBooks
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        amountLabel.amount = 57612.43
+        familyBook = familyBooks[familyBookIndex]
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,8 +89,7 @@ class FamilyBookDetailViewController: UIViewController, UITableViewDataSource, U
         if indexPath.row < self.members.count{
             let cell:MemeberCell = tableView.dequeueReusableCellWithIdentifier("Member Cell") as MemeberCell
             
-            let member:NSMutableDictionary = self.members[indexPath.row] as NSMutableDictionary
-            cell.member = member
+            cell.member = members[indexPath.row]
             
             return cell
         }else{
@@ -129,11 +151,23 @@ class FamilyBookDetailViewController: UIViewController, UITableViewDataSource, U
     
     // MARK: - Button actions
     @IBAction func leftArrowButtonTapped(sender:AnyObject!){
-        amountLabel.amount = 8312.09
+        familyBookIndex = familyBookIndex - 1
+        
+        if (familyBookIndex < 0){
+            familyBookIndex = familyBooks.count - 1
+        }
+        
+        familyBook = familyBooks[familyBookIndex]
     }
     
     @IBAction func rightArrowButtonTapped(sender:AnyObject!){
-        amountLabel.amount = 57612.43
+        familyBookIndex = familyBookIndex + 1
+        
+        if (familyBookIndex == familyBooks.count){
+            familyBookIndex = 0
+        }
+        
+        familyBook = familyBooks[familyBookIndex]
     }
     
 }

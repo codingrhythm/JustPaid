@@ -1,22 +1,19 @@
 //
-//  FamilyBookJoinViewController.swift
+//  FamilyBookInviteViewController.swift
 //  Just Paid
 //
-//  Created by Zack Zhu on 13/08/2014.
+//  Created by Zack Zhu on 18/08/2014.
 //  Copyright (c) 2014 Zack Zhu. All rights reserved.
 //
 
 import UIKit
 
-class FamilyBookJoinViewController: UIViewController {
-    
-    @IBOutlet var invitaionCodeField:UITextField!
+class FamilyBookInviteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        invitaionCodeField.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +33,6 @@ class FamilyBookJoinViewController: UIViewController {
     */
     
     @IBAction func dismissButtonTapped(sender:AnyObject!){
-        invitaionCodeField.resignFirstResponder()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 

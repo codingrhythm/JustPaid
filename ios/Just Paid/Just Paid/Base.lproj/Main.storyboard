@@ -129,18 +129,64 @@ with your beloved ones!</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKy-D3-VqT">
-                                <rect key="frame" x="258" y="8" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKy-D3-VqT">
+                                <rect key="frame" x="276" y="0.0" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="opP-KS-2uz"/>
+                                    <constraint firstAttribute="width" constant="44" id="w0D-cp-XmH"/>
+                                </constraints>
+                                <state key="normal" image="CancelIcon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="dismissButtonTapped:" destination="M5n-qU-ju0" eventType="touchUpInside" id="UIh-u1-tDy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Invitaion Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbv-pM-alv">
+                                <rect key="frame" x="48" y="61" width="224" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="VhZ-e3-t4p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="0.56470588235294117" green="0.83529411764705885" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1234" minimumFontSize="72" translatesAutoresizingMaskIntoConstraints="NO" id="i7g-Ou-Pf6">
+                                <rect key="frame" x="48" y="123" width="224" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="5MT-oM-ZuR"/>
+                                    <constraint firstAttribute="width" constant="224" id="D3b-ZC-HfU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="72"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the inviation code of the family book you want to join. You can get this code from the owner of the family book." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="224" translatesAutoresizingMaskIntoConstraints="NO" id="Rz0-cZ-fFa">
+                                <rect key="frame" x="48" y="220" width="224" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="1n2-b1-lrs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="i7g-Ou-Pf6" secondAttribute="centerX" id="3EJ-gQ-fx5"/>
+                            <constraint firstItem="Rz0-cZ-fFa" firstAttribute="top" secondItem="i7g-Ou-Pf6" secondAttribute="bottom" constant="25" id="AQg-Mf-Dcc"/>
+                            <constraint firstItem="mbv-pM-alv" firstAttribute="trailing" secondItem="I9P-HE-00T" secondAttribute="trailingMargin" constant="-32" id="Byf-L6-VpU"/>
+                            <constraint firstItem="LKy-D3-VqT" firstAttribute="top" secondItem="Zrp-eV-dpL" secondAttribute="bottom" id="P84-tQ-QOl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rz0-cZ-fFa" secondAttribute="trailing" constant="32" id="YcM-LZ-dNi"/>
+                            <constraint firstItem="mbv-pM-alv" firstAttribute="top" secondItem="I9P-HE-00T" secondAttribute="topMargin" constant="61" id="fCi-NX-KE1"/>
+                            <constraint firstItem="mbv-pM-alv" firstAttribute="leading" secondItem="I9P-HE-00T" secondAttribute="leadingMargin" constant="32" id="mbV-pf-ToW"/>
+                            <constraint firstItem="i7g-Ou-Pf6" firstAttribute="top" secondItem="mbv-pM-alv" secondAttribute="bottom" constant="33" id="qP4-4R-fiS"/>
+                            <constraint firstItem="Rz0-cZ-fFa" firstAttribute="leading" secondItem="I9P-HE-00T" secondAttribute="leadingMargin" constant="32" id="toY-TW-J98"/>
+                            <constraint firstAttribute="trailing" secondItem="LKy-D3-VqT" secondAttribute="trailing" id="v67-pj-ood"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="invitaionCodeField" destination="i7g-Ou-Pf6" id="kOA-37-5eI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yId-lQ-Zfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,7 +311,7 @@ with your beloved ones!</string>
                                             <outletCollection property="gestureRecognizers" destination="0xN-pU-SHg" appends="YES" id="BSH-27-aXB"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lN-j8-0Pi">
+                                    <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lN-j8-0Pi">
                                         <rect key="frame" x="50" y="60" width="220" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="1ld-d4-ukj"/>
@@ -416,6 +462,9 @@ with your beloved ones!</string>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="tintColor" red="0.0" green="0.67450980392156867" blue="0.75686274509803919" alpha="1" colorSpace="deviceRGB"/>
                                                     <state key="normal" title="  Invite" image="InviteIcon"/>
+                                                    <connections>
+                                                        <segue destination="Irq-HD-Xxt" kind="modal" id="rx3-Zu-tf1"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nH-nk-6yx">
                                                     <rect key="frame" x="160" y="0.0" width="160" height="69"/>
@@ -487,6 +536,157 @@ with your beloved ones!</string>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1624" y="-1090"/>
+        </scene>
+        <!--Family Book Invite View Controller-->
+        <scene sceneID="JwA-G8-C21">
+            <objects>
+                <viewController id="Irq-HD-Xxt" customClass="FamilyBookInviteViewController" customModule="Just_Paid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cf9-An-bAi"/>
+                        <viewControllerLayoutGuide type="bottom" id="1c7-nC-uH3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OfN-zT-6oG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PM8-bs-hCR">
+                                <rect key="frame" x="276" y="0.0" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="f7H-3Y-R12"/>
+                                    <constraint firstAttribute="width" constant="44" id="tDt-7X-MwE"/>
+                                </constraints>
+                                <state key="normal" image="CancelIcon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButtonTapped:" destination="Irq-HD-Xxt" eventType="touchUpInside" id="OTs-hh-B0E"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invitation Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIw-Al-qN3">
+                                <rect key="frame" x="48" y="61" width="224" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="loI-nL-REB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="0.56470588239999997" green="0.83529411760000005" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jO-LF-YRX">
+                                <rect key="frame" x="48" y="113" width="224" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="v0h-cg-oqT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="72"/>
+                                <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expires in 09:32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNI-SH-B4n">
+                                <rect key="frame" x="48" y="201" width="224" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="g6H-h1-29i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="224" translatesAutoresizingMaskIntoConstraints="NO" id="hKc-CS-Z8x">
+                                <rect key="frame" x="48" y="283" width="224" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="vP1-dB-cpN"/>
+                                </constraints>
+                                <string key="text">Send this code to the person you want to invite.
+</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hkw-X6-R8s">
+                                <rect key="frame" x="0.0" y="386" width="320" height="94"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLM-Lp-KGS">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="nKE-im-UXP"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFr-J0-2Cc">
+                                        <rect key="frame" x="26" y="15" width="50" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="Gf7-4l-i5g"/>
+                                            <constraint firstAttribute="width" constant="50" id="JrO-rc-SIi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <inset key="titleEdgeInsets" minX="-42" minY="53" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Message" image="MessageIcon">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKw-hJ-0bG">
+                                        <rect key="frame" x="98" y="15" width="50" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="Eic-hq-o2E"/>
+                                            <constraint firstAttribute="width" constant="50" id="STK-Vd-QJc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <inset key="titleEdgeInsets" minX="-34" minY="53" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Mail" image="EmailIcon">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send the invitation code via Message or Mail." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="144" translatesAutoresizingMaskIntoConstraints="NO" id="4eF-9V-dIu">
+                                        <rect key="frame" x="168" y="32" width="144" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="XTf-Kz-1DS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="tFr-J0-2Cc" firstAttribute="leading" secondItem="Hkw-X6-R8s" secondAttribute="leading" constant="26" id="88o-aW-3lz"/>
+                                    <constraint firstItem="4eF-9V-dIu" firstAttribute="leading" secondItem="UKw-hJ-0bG" secondAttribute="trailing" constant="20" id="GAg-Au-hh5"/>
+                                    <constraint firstItem="PLM-Lp-KGS" firstAttribute="leading" secondItem="Hkw-X6-R8s" secondAttribute="leading" id="GDi-qO-bZK"/>
+                                    <constraint firstAttribute="height" constant="94" id="Jwe-Lo-N3T"/>
+                                    <constraint firstAttribute="centerY" secondItem="4eF-9V-dIu" secondAttribute="centerY" id="QPK-Cj-eqm"/>
+                                    <constraint firstItem="UKw-hJ-0bG" firstAttribute="leading" secondItem="tFr-J0-2Cc" secondAttribute="trailing" constant="22" id="bEB-b9-1YP"/>
+                                    <constraint firstAttribute="centerY" secondItem="tFr-J0-2Cc" secondAttribute="centerY" id="gR0-U1-ihV"/>
+                                    <constraint firstAttribute="trailing" secondItem="PLM-Lp-KGS" secondAttribute="trailing" id="jxg-gf-sMX"/>
+                                    <constraint firstItem="PLM-Lp-KGS" firstAttribute="top" secondItem="Hkw-X6-R8s" secondAttribute="top" id="kzd-HG-VBB"/>
+                                    <constraint firstAttribute="trailing" secondItem="4eF-9V-dIu" secondAttribute="trailing" constant="8" id="qAB-gW-Hy9"/>
+                                    <constraint firstAttribute="centerY" secondItem="UKw-hJ-0bG" secondAttribute="centerY" id="uIJ-xV-qKD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="qIw-Al-qN3" secondAttribute="trailing" constant="32" id="3Ty-u9-Rgd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2jO-LF-YRX" secondAttribute="trailing" constant="32" id="7UE-1T-yhe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hKc-CS-Z8x" secondAttribute="trailing" constant="32" id="IWK-q0-6ZR"/>
+                            <constraint firstItem="qIw-Al-qN3" firstAttribute="top" secondItem="cf9-An-bAi" secondAttribute="bottom" constant="61" id="L1I-rb-gYQ"/>
+                            <constraint firstItem="hKc-CS-Z8x" firstAttribute="leading" secondItem="OfN-zT-6oG" secondAttribute="leadingMargin" constant="32" id="O7w-hK-H0K"/>
+                            <constraint firstItem="1c7-nC-uH3" firstAttribute="top" secondItem="Hkw-X6-R8s" secondAttribute="bottom" id="QNf-Nv-7dj"/>
+                            <constraint firstItem="qIw-Al-qN3" firstAttribute="leading" secondItem="OfN-zT-6oG" secondAttribute="leadingMargin" constant="32" id="Td2-EV-vZ5"/>
+                            <constraint firstItem="PM8-bs-hCR" firstAttribute="top" secondItem="cf9-An-bAi" secondAttribute="bottom" id="Tuf-5a-g9d"/>
+                            <constraint firstItem="2jO-LF-YRX" firstAttribute="top" secondItem="qIw-Al-qN3" secondAttribute="bottom" constant="23" id="Xlr-Rc-jFF"/>
+                            <constraint firstAttribute="trailing" secondItem="PM8-bs-hCR" secondAttribute="trailing" id="XvN-Ls-CJW"/>
+                            <constraint firstItem="hKc-CS-Z8x" firstAttribute="top" secondItem="qNI-SH-B4n" secondAttribute="bottom" constant="60" id="aCV-Yf-WKc"/>
+                            <constraint firstItem="qNI-SH-B4n" firstAttribute="leading" secondItem="OfN-zT-6oG" secondAttribute="leadingMargin" constant="32" id="atS-WJ-1an"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qNI-SH-B4n" secondAttribute="trailing" constant="32" id="cet-yL-Dfz"/>
+                            <constraint firstAttribute="trailing" secondItem="Hkw-X6-R8s" secondAttribute="trailing" id="fKv-IP-ZHx"/>
+                            <constraint firstItem="Hkw-X6-R8s" firstAttribute="leading" secondItem="OfN-zT-6oG" secondAttribute="leading" id="v7h-tL-Xza"/>
+                            <constraint firstItem="2jO-LF-YRX" firstAttribute="leading" secondItem="OfN-zT-6oG" secondAttribute="leadingMargin" constant="32" id="x9X-Uu-Kti"/>
+                            <constraint firstItem="qNI-SH-B4n" firstAttribute="top" secondItem="2jO-LF-YRX" secondAttribute="bottom" constant="1" id="ynU-ab-MSX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfJ-6h-BaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038" y="-1090"/>
         </scene>
         <!--Timeline Root View Controller-->
         <scene sceneID="hNz-n2-bh7">
@@ -627,10 +827,13 @@ with your beloved ones!</string>
     </scenes>
     <resources>
         <image name="BookItemIcon" width="46" height="45"/>
+        <image name="CancelIcon" width="13" height="13"/>
         <image name="DeleteIcon" width="16" height="20"/>
+        <image name="EmailIcon" width="51" height="51"/>
         <image name="FamilyBookBackground" width="320" height="250"/>
         <image name="FamilyBookIcon" width="35" height="35"/>
         <image name="InviteIcon" width="19" height="19"/>
+        <image name="MessageIcon" width="51" height="51"/>
         <image name="TimelineIcon" width="35" height="36"/>
         <image name="addIcon" width="15" height="15"/>
         <image name="leftArrowIcon" width="12" height="20"/>

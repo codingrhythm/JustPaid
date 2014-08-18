@@ -24,8 +24,8 @@ class JPAnimatedCurrencyLabel: JPCurrencyLabel {
         
         animateStep = 1
         
-        if abs(delta) > 100{
-            animateStep *= delta / 100
+        if abs(delta) > 200{
+            animateStep *= delta / 200
         }
         
         animationTimer = NSTimer.scheduledTimerWithTimeInterval(0.001, target: self, selector: Selector("animateNumber"), userInfo: nil, repeats: true)
