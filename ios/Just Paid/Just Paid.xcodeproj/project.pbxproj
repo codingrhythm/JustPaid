@@ -26,12 +26,14 @@
 		14999A551977B76300F8C4A0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14999A541977B76300F8C4A0 /* CoreDataManager.swift */; };
 		14A43DF2197F881000E483E2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A43DF1197F881000E483E2 /* CloudKit.framework */; };
 		14A43DF4197F8EF100E483E2 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A43DF3197F8EF100E483E2 /* CloudKitManager.swift */; };
+		14A5FABB19A164C9000AE7D9 /* FamilyBookInviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A5FABA19A164C9000AE7D9 /* FamilyBookInviteViewController.swift */; };
 		14E15EE01973BE34002D2DF1 /* JustPaidModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14E15EDE1973BE34002D2DF1 /* JustPaidModel.xcdatamodeld */; };
 		14E70D7D19938ABC0043994E /* JPTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E70D7C19938ABC0043994E /* JPTabBarItem.swift */; };
 		14E70D7F199399660043994E /* JPAddTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E70D7E199399660043994E /* JPAddTabBarItem.swift */; };
 		14E70D83199435EC0043994E /* JPCurrencyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E70D82199435EC0043994E /* JPCurrencyLabel.swift */; };
 		14E70D85199438950043994E /* JPAnimatedCurrencyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E70D84199438950043994E /* JPAnimatedCurrencyLabel.swift */; };
 		14ECC1A21992E2F200F0B074 /* FamilyBookCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECC1A11992E2F200F0B074 /* FamilyBookCategoryCell.swift */; };
+		14F0BC60199AD08E00AED501 /* FamilyBookJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0BC5F199AD08E00AED501 /* FamilyBookJoinViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,12 +71,14 @@
 		14A43DF0197F880D00E483E2 /* Just Paid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Just Paid.entitlements"; sourceTree = "<group>"; };
 		14A43DF1197F881000E483E2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		14A43DF3197F8EF100E483E2 /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		14A5FABA19A164C9000AE7D9 /* FamilyBookInviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBookInviteViewController.swift; sourceTree = "<group>"; };
 		14E15EDF1973BE34002D2DF1 /* JustPaidModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JustPaidModel.xcdatamodel; sourceTree = "<group>"; };
 		14E70D7C19938ABC0043994E /* JPTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPTabBarItem.swift; sourceTree = "<group>"; };
 		14E70D7E199399660043994E /* JPAddTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPAddTabBarItem.swift; sourceTree = "<group>"; };
 		14E70D82199435EC0043994E /* JPCurrencyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPCurrencyLabel.swift; sourceTree = "<group>"; };
 		14E70D84199438950043994E /* JPAnimatedCurrencyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPAnimatedCurrencyLabel.swift; sourceTree = "<group>"; };
 		14ECC1A11992E2F200F0B074 /* FamilyBookCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBookCategoryCell.swift; sourceTree = "<group>"; };
+		14F0BC5F199AD08E00AED501 /* FamilyBookJoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyBookJoinViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 				1494898C198EF18B002F794E /* Cells */,
 				14948988198E2A39002F794E /* FamilyBookDetailViewController.swift */,
 				1494898A198E2A81002F794E /* FamilyBookNavigationController.swift */,
+				14F0BC5F199AD08E00AED501 /* FamilyBookJoinViewController.swift */,
+				14A5FABA19A164C9000AE7D9 /* FamilyBookInviteViewController.swift */,
 			);
 			name = "Family Book View Controllers";
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 				14948989198E2A39002F794E /* FamilyBookDetailViewController.swift in Sources */,
 				1494C708197DCF1F006AF4E4 /* CKEntity.swift in Sources */,
 				14E70D7D19938ABC0043994E /* JPTabBarItem.swift in Sources */,
+				14A5FABB19A164C9000AE7D9 /* FamilyBookInviteViewController.swift in Sources */,
 				14ECC1A21992E2F200F0B074 /* FamilyBookCategoryCell.swift in Sources */,
 				1494C702197DCDB2006AF4E4 /* FamilyBook.swift in Sources */,
 				1462ED3119734214004862EC /* AppDelegate.swift in Sources */,
@@ -364,6 +371,7 @@
 				1494C700197DCDB1006AF4E4 /* BookKeeper.swift in Sources */,
 				14999A551977B76300F8C4A0 /* CoreDataManager.swift in Sources */,
 				1494C6FE197DCD62006AF4E4 /* BookItem.swift in Sources */,
+				14F0BC60199AD08E00AED501 /* FamilyBookJoinViewController.swift in Sources */,
 				143E6747197E4AC100FB32E5 /* BookItemReminder.swift in Sources */,
 				1494C70A197DCF40006AF4E4 /* BookItemTag.swift in Sources */,
 				14E70D7F199399660043994E /* JPAddTabBarItem.swift in Sources */,

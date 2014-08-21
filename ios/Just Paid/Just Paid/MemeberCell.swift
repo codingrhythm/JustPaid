@@ -17,7 +17,7 @@ class MemeberCell: UITableViewCell {
     @IBOutlet var recentActivityTimeLabel:UILabel!
     @IBOutlet var ownerIcon:UIImageView!
     
-    var member:NSMutableDictionary! {
+    var member:Dictionary<String, Any>! {
         didSet {
             self.nameLabel.text = self.member["name"] as String
             self.recentActivityLabel.text = self.member["recent_activity"] as String
@@ -29,6 +29,8 @@ class MemeberCell: UITableViewCell {
             }else{
                 self.ownerIcon.hidden = true
             }
+            
+            self.photoView.image = UIImage(named: "defaultAvatarIcon")
         }
     }
 
