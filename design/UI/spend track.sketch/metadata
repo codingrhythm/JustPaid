@@ -13,14 +13,9 @@
 		<string>HelveticaNeue-Thin</string>
 		<string>HelveticaNeue-Light</string>
 		<string>HelveticaNeue</string>
-		<string>HelveticaNeue-Medium</string>
 	</array>
 	<key>length</key>
-<<<<<<< HEAD
-	<integer>10544259</integer>
-=======
-	<integer>9685033</integer>
->>>>>>> FETCH_HEAD
+	<integer>10892653</integer>
 	<key>version</key>
 	<integer>37</integer>
 </dict>
