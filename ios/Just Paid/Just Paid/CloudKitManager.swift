@@ -75,7 +75,7 @@ class CloudKitManager:NSObject{
     func requestApplicationPermission(){
         func applicationPermissionRequested(permission:CKApplicationPermissionStatus, error:NSError!){
             
-            if error{
+            if error != nil{
                 println("failed to request app permission")
                 println(error)
                 return

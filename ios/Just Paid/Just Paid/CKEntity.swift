@@ -37,7 +37,7 @@ class CKEntity: NSManagedObject, CKEntityProtocol {
     @NSManaged var ck_publicSyncStatus: String
     @NSManaged var ck_isDirty:NSNumber
     
-    var zoneID:CKRecordZoneID {
+    var zoneID:CKRecordZoneID? {
         return CKRecordZoneID(zoneName:PrivateZoneName, ownerName: CKOwnerDefaultName)
     }
     
@@ -88,36 +88,7 @@ class CKEntity: NSManagedObject, CKEntityProtocol {
     
     // Sync to private database
     private func syncWithPrivateDB(){
-        // record save handler
-        func recordSaved(record:CKRecord?, error:NSError?){
-            if (error != nil){
-                // handle the error
-                println(error)
-                return
-            }
-            
-            println("record synced in private database")
-            self.ck_privateReferenceID = record!.recordID.recordName
-            self.ck_privateChangeTag = record!.recordChangeTag
-            self.ck_privateSyncStatus = SyncStatusSynced
-            self.ck_isDirty = 0
-            self.managedObjectContext.save(nil)
-        }
         
-        func recordDeleted(recordID:CKRecordID?, error:NSError?){
-            if (error != nil){
-                println(error)
-                return
-            }
-            
-            println("record delted from private database")
-            self.managedObjectContext.deleteObject(self)
-        }
-        
-        // record process block
-        func recordProgressChanged(record:CKRecord?, progress:Double){
-            println("progress changed")
-        }
         
         // save to public database
         if self.ck_privateSyncStatus == SyncStatusOffline {
@@ -183,5 +154,36 @@ class CKEntity: NSManagedObject, CKEntityProtocol {
         self.ck_privateSyncStatus = SyncStatusDeleted
         self.ck_publicSyncStatus = SyncStatusDeleted
         self.managedObjectContext.save(nil)
+    }
+    
+    // record save handler
+    private func recordSaved(record:CKRecord?, error:NSError?){
+        if (error != nil){
+            // handle the error
+            println(error)
+            return
+        }
+        
+        println("record synced in private database")
+        self.ck_privateReferenceID = record!.recordID.recordName
+        self.ck_privateChangeTag = record!.recordChangeTag
+        self.ck_privateSyncStatus = SyncStatusSynced
+        self.ck_isDirty = 0
+        self.managedObjectContext.save(nil)
+    }
+    
+    private func recordDeleted(recordID:CKRecordID?, error:NSError?){
+        if (error != nil){
+            println(error)
+            return
+        }
+        
+        println("record delted from private database")
+        self.managedObjectContext.deleteObject(self)
+    }
+    
+    // record process block
+    private func recordProgressChanged(record:CKRecord?, progress:Double){
+        println("progress changed")
     }
 }

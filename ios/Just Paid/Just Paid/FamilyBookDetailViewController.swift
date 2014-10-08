@@ -98,6 +98,50 @@ class FamilyBookDetailViewController: UIViewController, UITableViewDataSource, U
         }
     }
     
+    func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
+        if indexPath.row < members.count{
+            return true
+        }
+        
+        return false
+    }
+    
+    
+    func tableView(tableView: UITableView!, editActionsForRowAtIndexPath indexPath: NSIndexPath!) -> [AnyObject]! {
+        var action:UITableViewRowAction!
+        
+        if indexPath.row == 0{
+            action = UITableViewRowAction(
+                style: UITableViewRowActionStyle.Normal,
+                title: "Edit",
+                handler: handleRowAction
+            )
+            
+            action.backgroundColor = UIColor(red: 0, green: 172/255, blue: 193/255, alpha: 1)
+        }else{
+            action = UITableViewRowAction(
+                style: UITableViewRowActionStyle.Default,
+                title: "Delete",
+                handler: handleRowAction)
+            
+            action.backgroundColor = UIColor(red: 243/255, green: 145/255, blue: 145/255, alpha: 1)
+        }
+        
+        return [action]
+    }
+    
+    func handleRowAction(action: UITableViewRowAction!, indexPath: NSIndexPath!){
+        println(indexPath.row)
+    }
+    
+    func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+        if editingStyle == UITableViewCellEditingStyle.Delete{
+            println("delete")
+        }else{
+            println("edit")
+        }
+    }
+    
     // MARK: - Handle Delete action
     @IBAction func deleteButtonTapped(sender:AnyObject!){
         let actionSheet:UIActionSheet = UIActionSheet(title: "All members will not be able to access this family book again. Are you sure you want to delete this family book?", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: "Delete")

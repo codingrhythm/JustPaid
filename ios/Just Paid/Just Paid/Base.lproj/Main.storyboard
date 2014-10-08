@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
         <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -31,10 +31,10 @@
             </objects>
             <point key="canvasLocation" x="755" y="-1090"/>
         </scene>
-        <!--View Controller-->
+        <!--Family Book Welcome View Controller-->
         <scene sceneID="dZX-1f-qh2">
             <objects>
-                <viewController id="x4h-jn-44K" sceneMemberID="viewController">
+                <viewController id="x4h-jn-44K" customClass="FamilyBookWelcomeViewController" customModule="Just_Paid" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Fe-Ig-RyW"/>
                         <viewControllerLayoutGuide type="bottom" id="Cg9-tB-ndW"/>
@@ -55,7 +55,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rkU-zh-mj1" kind="push" id="DBA-Cg-zxi"/>
+                                    <action selector="createButtonTapped:" destination="x4h-jn-44K" eventType="touchUpInside" id="7CC-yl-fe4"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey, there!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZm-P2-bCt">
@@ -92,7 +92,7 @@ with your beloved ones!</string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="M5n-qU-ju0" kind="modal" id="Ili-YM-NyO"/>
+                                    <action selector="joinButtonTapped:" destination="x4h-jn-44K" eventType="touchUpInside" id="jKD-Pt-XUG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -112,6 +112,10 @@ with your beloved ones!</string>
                     </view>
                     <navigationItem key="navigationItem" id="4Td-4s-qQR"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <segue destination="rkU-zh-mj1" kind="push" identifier="Show Family Book Detail View" id="yqJ-LO-8zA"/>
+                        <segue destination="M5n-qU-ju0" kind="modal" identifier="Show Family Book Join View" id="n6d-w4-C4M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTm-yz-eMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

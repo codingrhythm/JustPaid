@@ -37,7 +37,7 @@ class MemeberCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Add line
-        let line:UIImageView = UIImageView(frame: CGRectMake(0, self.frame.size.height-0.5, self.frame.size.width, 0.5))
+        let line:UIImageView = UIImageView(frame: CGRectMake(-50, self.frame.size.height-0.5, self.frame.size.width+100, 0.5))
         line.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
         self.contentView.addSubview(line)
     }

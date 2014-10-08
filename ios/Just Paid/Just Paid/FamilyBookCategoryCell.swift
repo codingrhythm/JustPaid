@@ -41,7 +41,7 @@ class FamilyBookCategoryCell: UICollectionViewCell {
         let path = UIBezierPath(ovalInRect: rect)
         
         // Draw the background ring layer
-        if !backgroundRingLayer{
+        if (backgroundRingLayer == nil){
             backgroundRingLayer = CAShapeLayer()
             layer.addSublayer(backgroundRingLayer)
             
@@ -55,7 +55,7 @@ class FamilyBookCategoryCell: UICollectionViewCell {
         
         
         // Draw the ring layer
-        if !ringLayer{
+        if (ringLayer == nil){
             ringLayer = CAShapeLayer()
             
             ringLayer.path = path.CGPath
@@ -76,7 +76,7 @@ class FamilyBookCategoryCell: UICollectionViewCell {
     func updateLayerProperties(){
         var _rating = rating
         
-        if category{
+        if category != nil{
             _rating = category["percent"] as Double
             icon.image = UIImage(named: category["name"] as String + "Icon")
         }

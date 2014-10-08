@@ -95,7 +95,7 @@ class CoreDataManager:NSObject {
         var combinedSet: NSMutableSet?
         
         // get userInfo from notification object
-        let userInfo:NSDictionary = notification.userInfo as NSDictionary
+        let userInfo:[NSObject:AnyObject] = notification.userInfo!
         
         // get all inserted objects
         let insertedObjects: NSSet? = userInfo[NSInsertedObjectsKey] as? NSSet
@@ -103,7 +103,7 @@ class CoreDataManager:NSObject {
         
         // get all updated objects
         let updatedObjects: NSSet? = userInfo[NSUpdatedObjectsKey] as? NSSet
-        combinedSet!.unionSet(updatedObjects)
+        combinedSet!.unionSet(updatedObjects!)
         
         
         // loop the list, sync the object if it comforts with CKEntityProtocal
